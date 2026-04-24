@@ -135,7 +135,7 @@
         </div>
     </section>
 
-    <section class="py-28 bg-white">
+    <section class="pt-28 pb-48 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div>
@@ -174,26 +174,4 @@
         </div>
     </section>
 
-    <section id="ppdb" class="py-24 px-4">
-        <div
-            class="max-w-6xl mx-auto bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 rounded-[3.5rem] p-12 md:p-24 text-center text-white shadow-[0_35px_60px_-15px_rgba(124,58,237,0.5)] relative overflow-hidden">
-            <div
-                class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
-            </div>
-
-            <div class="relative z-10">
-                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Gabung Bersama Kami</h2>
-                <p
-                    class="text-purple-100 mb-12 text-lg md:text-2xl max-w-2xl mx-auto font-medium opacity-90 leading-relaxed">
-                    Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara resmi.
-                </p>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="#"
-                        class="bg-white text-purple-900 px-14 py-6 rounded-2xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-xl uppercase tracking-widest">
-                        DAFTAR PPDB ONLINE
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
