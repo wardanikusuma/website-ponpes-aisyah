@@ -58,15 +58,18 @@
                         </button>
 
                         <div
-                            class="dropdown-menu hidden absolute left-0 w-48 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
-                            <a href="{{ route('tentang.profil') }}"
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                            <a href="{{ route('tentang') }}#profil"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Profile</a>
-                            <a href="{{ route('tentang.visi-misi') }}"
+                            <a href="{{ route('tentang') }}#visi"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Visi
-                                Misi</a>
-                            <a href="{{ route('tentang.sejarah') }}"
+                                & Misi</a>
+                            <a href="{{ route('tentang') }}#sejarah"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Sejarah</a>
-                            <a href="{{ route('tentang.akreditasi') }}"
+                            <a href="{{ route('tentang') }}#struktur"
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Struktur
+                                Organisasi</a>
+                            <a href="{{ route('tentang') }}#akreditasi"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Akreditasi</a>
                         </div>
                     </div>
@@ -121,36 +124,71 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-900 text-white py-16 mt-0">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 border-b border-gray-800 pb-12">
-            <div class="col-span-1">
-                <h4 class="text-xl font-black mb-4 tracking-tighter uppercase">AISYAH <span
-                        class="text-purple-500">SAMAWA</span></h4>
-                <p class="text-gray-400 leading-relaxed font-medium">
-                    Mewujudkan generasi muslimah yang kokoh dalam spiritualitas, cerdas secara intelektual, dan mulia
-                    dalam moralitas.
+    <footer class="relative bg-gray-900 text-white pt-64 pb-16 mt-0">
+        <!-- CTA Card Overlapping Footer -->
+        <div class="absolute -top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-30">
+            <div class="bg-white rounded-[2.5rem] p-10 md:p-14 text-center shadow-2xl border border-purple-100">
+                <h2 class="text-purple-700 font-black tracking-[0.4em] text-xs mb-4 uppercase">Daftar PPDB</h2>
+                <p class="text-gray-600 mb-8 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
+                    Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara resmi.
                 </p>
-            </div>
-            <div>
-                <h5 class="font-bold uppercase tracking-widest text-sm text-gray-500 mb-6">Navigasi Cepat</h5>
-                <ul class="space-y-4 font-bold text-gray-300">
-                    <li><a href="{{ route('tentang.profil') }}" class="hover:text-purple-400 transition">Profil
-                            Pondok</a></li>
-                    <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a></li>
-                    <li><a href="#ppdb" class="hover:text-purple-400 transition">Pendaftaran Santri</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="font-bold uppercase tracking-widest text-sm text-gray-500 mb-6">Kontak</h5>
-                <p class="text-gray-400 font-medium leading-relaxed">
-                    Brang Biji, Sumbawa Besar<br>
-                    Nusa Tenggara Barat<br>
-                    <span class="text-white mt-4 block font-black">+62 812-3456-7890</span>
-                </p>
+                <a href="#ppdb"
+                    class="inline-block bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-10 py-4 rounded-xl font-black hover:shadow-lg hover:shadow-purple-500/40 transition-all text-sm uppercase tracking-widest">
+                    Daftar Sekarang
+                </a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 pt-8 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.3em]">
-            <p>&copy; 2026 PP Aisyah Samawa. Designed for Excellence.</p>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-16">
+                <!-- Col 1: Logo & Desc -->
+                <div class="col-span-1">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden mr-3">
+                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo" class="w-full h-full object-contain p-1">
+                        </div>
+                        <h4 class="text-xl font-black tracking-tighter uppercase">AISYAH <span class="text-purple-500">SAMAWA</span></h4>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed font-medium text-sm">
+                        Mewujudkan generasi muslimah yang kokoh dalam spiritualitas, cerdas secara intelektual, dan mulia dalam moralitas.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigasi -->
+                <div>
+                    <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Navigasi Cepat</h5>
+                    <ul class="space-y-4 font-bold text-gray-300 text-sm">
+                        <li><a href="{{ route('tentang') }}#profil" class="hover:text-purple-400 transition">Profil Pondok</a></li>
+                        <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a></li>
+                        <li><a href="#ppdb" class="hover:text-purple-400 transition">Pendaftaran Santri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Kontak -->
+                <div>
+                    <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Kontak</h5>
+                    <p class="text-gray-400 font-medium leading-relaxed text-sm mb-4">
+                        Brang Biji, Sumbawa Besar<br>
+                        Nusa Tenggara Barat
+                    </p>
+                    <span class="text-white block font-black text-sm">+62 812-3456-7890</span>
+                </div>
+
+                <!-- Col 4: Map -->
+                <div class="col-span-1">
+                    <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Lokasi Kami</h5>
+                    <div class="rounded-2xl overflow-hidden h-48 border border-gray-800 shadow-lg">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.064567223456!2d117.4208!3d-8.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMDAuMCJTIDExN8KwMjUnMTQuOSJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" 
+                            class="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.3em]">
+                <p>&copy; 2026 PP Aisyah Samawa. Designed for Excellence.</p>
+            </div>
         </div>
     </footer>
 
