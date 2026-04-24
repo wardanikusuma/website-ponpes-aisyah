@@ -6,15 +6,6 @@ use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function beranda() { return view('pages.beranda'); }
-    public function tentang() { return view('pages.tentang'); }
-    public function akademik() { return view('pages.akademik'); }
-    public function kesiswaan() { return view('pages.kesiswaan'); }
-=======
-=======
->>>>>>> 897b3de751cd7d3f0ed6df9858aa7afa56255b22
     // Menggunakan pages.beranda sesuai nama file kamu
     public function beranda()
     {
@@ -22,50 +13,58 @@ class StaticPageController extends Controller
     }
 
     // Menu Tentang
+    public function tentang()
+    {
+        return view('pages.tentang');
+    }
+
     public function profil()
     {
-        return view('pages.tentang.profil');
+        // Karena sub-halaman belum ada, arahkan ke halaman utama tentang
+        return redirect()->route('tentang', ['#profil']);
     }
     public function visiMisi()
     {
-        return view('pages.tentang.visi-misi');
+        return redirect()->route('tentang', ['#visi']);
     }
     public function sejarah()
     {
-        return view('pages.tentang.sejarah');
+        return redirect()->route('tentang', ['#sejarah']);
     }
     public function akreditasi()
     {
-        return view('pages.tentang.akreditasi');
+        return redirect()->route('tentang', ['#akreditasi']);
     }
 
     // Menu Akademik
     public function akademik()
     {
-        return view('pages.akademik');
+        // Cek jika view ada, jika tidak kembalikan ke beranda atau buat stub
+        if (view()->exists('pages.akademik')) {
+            return view('pages.akademik');
+        }
+        return view('pages.beranda'); // Fallback sementara
     }
 
     // Menu Kesiswaan (Dropdown)
+    public function kesiswaan()
+    {
+        if (view()->exists('pages.kesiswaan.berita')) {
+            return view('pages.kesiswaan.berita');
+        }
+        return view('pages.beranda'); // Fallback sementara
+    }
+
     public function prestasi()
     {
-        return view('pages.kesiswaan.prestasi');
+        return view('pages.beranda');
     }
     public function ekskul()
     {
-        return view('pages.kesiswaan.ekstrakurikuler');
+        return view('pages.beranda');
     }
     public function berita()
     {
-        return view('pages.kesiswaan.berita');
+        return view('pages.beranda');
     }
-
-    // Fallback jika kesiswaan diakses tanpa sub-menu
-    public function kesiswaan()
-    {
-        return view('pages.kesiswaan.berita');
-    }
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 897b3de751cd7d3f0ed6df9858aa7afa56255b22
 }
