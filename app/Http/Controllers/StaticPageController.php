@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 class StaticPageController extends Controller
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function beranda() { return view('pages.beranda'); }
     public function tentang() { return view('pages.tentang'); }
     public function akademik() { return view('pages.akademik'); }
     public function kesiswaan() { return view('pages.kesiswaan'); }
 =======
+=======
+>>>>>>> 897b3de751cd7d3f0ed6df9858aa7afa56255b22
     // Menggunakan pages.beranda sesuai nama file kamu
     public function beranda()
     {
@@ -61,5 +64,8 @@ class StaticPageController extends Controller
     {
         return view('pages.kesiswaan.berita');
     }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 897b3de751cd7d3f0ed6df9858aa7afa56255b22
 }

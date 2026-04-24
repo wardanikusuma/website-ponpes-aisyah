@@ -5,9 +5,6 @@ use App\Http\Controllers\StaticPageController;
 
 // 1. ROUTE BERANDA (Ini yang bikin error kalau ->name('home') nya tidak ada)
 Route::get('/', [StaticPageController::class, 'beranda'])->name('home');
-<<<<<<< HEAD
-Route::get('/tentang', [StaticPageController::class, 'tentang'])->name('tentang');
-=======
 
 // 2. GROUP TENTANG
 Route::prefix('tentang')->group(function () {
@@ -18,7 +15,6 @@ Route::prefix('tentang')->group(function () {
 });
 
 // 3. ROUTE AKADEMIK
->>>>>>> main
 Route::get('/akademik', [StaticPageController::class, 'akademik'])->name('akademik');
 
 // 4. GROUP KESISWAAN
