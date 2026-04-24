@@ -5,16 +5,21 @@ use App\Http\Controllers\StaticPageController;
 
 // 1. ROUTE BERANDA (Ini yang bikin error kalau ->name('home') nya tidak ada)
 Route::get('/', [StaticPageController::class, 'beranda'])->name('home');
+
+// 2. GROUP TENTANG
 Route::get('/tentang', [StaticPageController::class, 'tentang'])->name('tentang');
-Route::permanentRedirect('/tentang/profil', '/tentang#profil');
-Route::permanentRedirect('/tentang/visi-misi', '/tentang#visi');
-Route::permanentRedirect('/tentang/sejarah', '/tentang#sejarah');
-Route::permanentRedirect('/tentang/akreditasi', '/tentang#akreditasi');
+Route::prefix('tentang')->group(function () {
+    Route::get('/profil', [StaticPageController::class, 'profil'])->name('tentang.profil');
+    Route::get('/visi-misi', [StaticPageController::class, 'visiMisi'])->name('tentang.visi-misi');
+    Route::get('/sejarah', [StaticPageController::class, 'sejarah'])->name('tentang.sejarah');
+    Route::get('/akreditasi', [StaticPageController::class, 'akreditasi'])->name('tentang.akreditasi');
+});
 
 // 3. ROUTE AKADEMIK
 Route::get('/akademik', [StaticPageController::class, 'akademik'])->name('akademik');
 
 // 4. GROUP KESISWAAN
+Route::get('/kesiswaan', [StaticPageController::class, 'kesiswaan'])->name('kesiswaan');
 Route::prefix('kesiswaan')->group(function () {
     Route::get('/prestasi', [StaticPageController::class, 'prestasi'])->name('kesiswaan.prestasi');
     Route::get('/ekstrakurikuler', [StaticPageController::class, 'ekskul'])->name('kesiswaan.ekskul');
