@@ -59,14 +59,14 @@
 
                         <div
                             class="dropdown-menu hidden absolute left-0 w-48 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
-                            <a href="/tentang/profil"
+                            <a href="{{ route('tentang.profil') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Profile</a>
-                            <a href="/tentang/visi-misi"
+                            <a href="{{ route('tentang.visi-misi') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Visi
                                 Misi</a>
-                            <a href="/tentang/sejarah"
+                            <a href="{{ route('tentang.sejarah') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Sejarah</a>
-                            <a href="/tentang/akreditasi"
+                            <a href="{{ route('tentang.akreditasi') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Akreditasi</a>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
             <div>
                 <h5 class="font-bold uppercase tracking-widest text-sm text-gray-500 mb-6">Navigasi Cepat</h5>
                 <ul class="space-y-4 font-bold text-gray-300">
-                    <li><a href="/tentang/profil" class="hover:text-purple-400 transition">Profil Pondok</a></li>
+                    <li><a href="{{ route('tentang.profil') }}" class="hover:text-purple-400 transition">Profil Pondok</a></li>
                     <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a></li>
                     <li><a href="#ppdb" class="hover:text-purple-400 transition">Pendaftaran Santri</a></li>
                 </ul>
