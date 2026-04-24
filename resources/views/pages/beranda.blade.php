@@ -36,7 +36,7 @@
             </p>
 
             <div class="mt-12 flex flex-wrap justify-center gap-6">
-                <a href="{{ route('tentang') }}"
+                <a href="{{ route('tentang.profil') }}"
                     class="bg-white text-purple-900 px-10 py-4 rounded-2xl font-black shadow-2xl hover:bg-purple-50 transition-all transform hover:-translate-y-1 text-lg">
                     PROFIL PONDOK
                 </a>
@@ -144,7 +144,7 @@
                     <p class="text-gray-500 mt-3 text-lg font-medium">Kegiatan, prestasi, dan inspirasi harian santriwati.
                     </p>
                 </div>
-                <a href="{{ route('kesiswaan') }}"
+                <a href="{{ route('kesiswaan.berita') }}"
                     class="group flex items-center gap-3 text-purple-700 font-black uppercase text-sm tracking-widest mt-6 md:mt-0">
                     Lihat Semua
                     <span

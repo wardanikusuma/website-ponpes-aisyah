@@ -75,10 +75,28 @@
                         class="text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors">
                         Akademik
                     </a>
-                    <a href="{{ route('kesiswaan') }}"
-                        class="text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors">
-                        Kesiswaan
-                    </a>
+
+                    <div class="relative dropdown">
+                        <button
+                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                            Kesiswaan
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                            <a href="{{ route('kesiswaan.prestasi') }}"
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Prestasi</a>
+                            <a href="{{ route('kesiswaan.ekskul') }}"
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Ekstrakurikuler</a>
+                            <a href="{{ route('kesiswaan.berita') }}"
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Berita
+                                & Kegiatan</a>
+                        </div>
+                    </div>
 
                     <a href="#ppdb"
                         class="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-tighter shadow-lg shadow-purple-200 hover:shadow-purple-400 transition-all transform hover:-translate-y-1">
@@ -116,7 +134,8 @@
             <div>
                 <h5 class="font-bold uppercase tracking-widest text-sm text-gray-500 mb-6">Navigasi Cepat</h5>
                 <ul class="space-y-4 font-bold text-gray-300">
-                    <li><a href="{{ route('tentang.profil') }}" class="hover:text-purple-400 transition">Profil Pondok</a></li>
+                    <li><a href="{{ route('tentang.profil') }}" class="hover:text-purple-400 transition">Profil
+                            Pondok</a></li>
                     <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a></li>
                     <li><a href="#ppdb" class="hover:text-purple-400 transition">Pendaftaran Santri</a></li>
                 </ul>
