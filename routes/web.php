@@ -38,3 +38,6 @@ Route::prefix('kesiswaan')->group(function () {
     Route::get('/ekstrakurikuler', [StaticPageController::class, 'ekskul'])->name('kesiswaan.ekskul');
     Route::get('/berita', [StaticPageController::class, 'berita'])->name('kesiswaan.berita');
 });
+
+
+Route::get('/lainnya', [StaticPageController::class, 'lainnya'])->name('lainnya');

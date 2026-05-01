@@ -67,4 +67,9 @@ class StaticPageController extends Controller
     {
         return redirect()->to(route('kesiswaan') . '#berita');
     }
+
+    public function lainnya()
+    {
+        return view('pages.lainnya');
+    }
 }

@@ -92,13 +92,16 @@
                         <div
                             class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
                             <a href="{{ route('akademik') }}#jenjang"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Jenjang Pendidikan</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Jenjang
+                                Pendidikan</a>
                             <a href="{{ route('akademik') }}#kurikulum"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Kurikulum</a>
                             <a href="{{ route('akademik') }}#unggulan"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program Unggulan</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program
+                                Unggulan</a>
                             <a href="{{ route('akademik') }}#ppdb"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB Online</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB
+                                Online</a>
                         </div>
                     </div>
 
@@ -124,6 +127,12 @@
                         </div>
                     </div>
 
+                    {{-- Link Menu Lainnya --}}
+                    <a href="{{ route('lainnya') }}"
+                        class="text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors {{ request()->routeIs('lainnya') ? 'text-purple-700' : '' }}">
+                        Lainnya
+                    </a>
+
                     <a href="{{ route('akademik') }}#ppdb"
                         class="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-tighter shadow-lg shadow-purple-200 hover:shadow-purple-400 transition-all transform hover:-translate-y-1">
                         PPDB ONLINE
@@ -148,42 +157,51 @@
     </main>
 
     <footer class="relative bg-gray-900 text-white pt-64 pb-16 mt-0">
-        {{-- Logika agar CTA Card ini TIDAK muncul di halaman Akademik agar tidak double --}}
-        @if(!Request::is('akademik*'))
-        <div class="absolute -top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-30">
-            <div class="bg-white rounded-[2.5rem] p-10 md:p-14 text-center shadow-2xl border border-purple-100">
-                <h2 class="text-purple-700 font-black tracking-[0.4em] text-xs mb-4 uppercase">Daftar PPDB</h2>
-                <p class="text-gray-600 mb-8 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
-                    Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara resmi.
-                </p>
-                <a href="{{ route('akademik') }}#ppdb"
-                    class="inline-block bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-10 py-4 rounded-xl font-black hover:shadow-lg hover:shadow-purple-500/40 transition-all text-sm uppercase tracking-widest">
-                    Daftar Sekarang
-                </a>
+        @if (!Request::is('akademik*'))
+            <div class="absolute -top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-30">
+                <div class="bg-white rounded-[2.5rem] p-10 md:p-14 text-center shadow-2xl border border-purple-100">
+                    <h2 class="text-purple-700 font-black tracking-[0.4em] text-xs mb-4 uppercase">Daftar PPDB</h2>
+                    <p class="text-gray-600 mb-8 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
+                        Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara
+                        resmi.
+                    </p>
+                    <a href="{{ route('akademik') }}#ppdb"
+                        class="inline-block bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-10 py-4 rounded-xl font-black hover:shadow-lg hover:shadow-purple-500/40 transition-all text-sm uppercase tracking-widest">
+                        Daftar Sekarang
+                    </a>
+                </div>
             </div>
-        </div>
         @endif
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-16">
                 <div class="col-span-1">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden mr-3">
-                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo" class="w-full h-full object-contain p-1">
+                        <div
+                            class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden mr-3">
+                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo"
+                                class="w-full h-full object-contain p-1">
                         </div>
-                        <h4 class="text-xl font-black tracking-tighter uppercase">AISYAH <span class="text-purple-500">SAMAWA</span></h4>
+                        <h4 class="text-xl font-black tracking-tighter uppercase">AISYAH <span
+                                class="text-purple-500">SAMAWA</span></h4>
                     </div>
                     <p class="text-gray-400 leading-relaxed font-medium text-sm">
-                        Mewujudkan generasi muslimah yang kokoh dalam spiritualitas, cerdas secara intelektual, dan mulia dalam moralitas.
+                        Mewujudkan generasi muslimah yang kokoh dalam spiritualitas, cerdas secara intelektual, dan
+                        mulia dalam moralitas.
                     </p>
                 </div>
 
                 <div>
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Navigasi Cepat</h5>
                     <ul class="space-y-4 font-bold text-gray-300 text-sm">
-                        <li><a href="{{ route('tentang') }}#profil" class="hover:text-purple-400 transition">Profil Pondok</a></li>
-                        <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a></li>
-                        <li><a href="{{ route('akademik') }}#ppdb" class="hover:text-purple-400 transition">Pendaftaran Santri</a></li>
+                        <li><a href="{{ route('tentang') }}#profil" class="hover:text-purple-400 transition">Profil
+                                Pondok</a></li>
+                        <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a>
+                        </li>
+                        <li><a href="{{ route('kesiswaan.prestasi') }}"
+                                class="hover:text-purple-400 transition">Kesiswaan</a></li>
+                        <li><a href="{{ route('lainnya') }}" class="hover:text-purple-400 transition">Layanan
+                                Informasi</a></li>
                     </ul>
                 </div>
 
@@ -199,14 +217,12 @@
                 <div class="col-span-1">
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Lokasi Kami</h5>
                     <div class="rounded-2xl overflow-hidden h-48 border border-gray-800 shadow-lg">
-                        <iframe 
-                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123!2d117.4184589!3d-8.4790876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcbecc5585949eb%3A0xe77bb9822f9cec70!2sPondok%20Pesantren%20'Aisyah%20Samawa!5e0!3m2!1sid!2sid!4v1714543140000!5m2!1sid!2sid" 
-                       class="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
-                        style="border:0;" 
-                       allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123!2d117.4184589!3d-8.4790876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcbecc5585949eb%3A0xe77bb9822f9cec70!2sPondok%20Pesantren%20'Aisyah%20Samawa!5e0!3m2!1sid!2sid!4v1714543140000!5m2!1sid!2sid"
+                            class="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
