@@ -3,53 +3,67 @@
 @section('title', 'Beranda')
 
 @section('content')
-    <section class="relative py-40 md:py-52 px-4 overflow-hidden bg-purple-900">
+    <section class="relative min-h-screen flex items-center pt-20 bg-purple-900">
         <div class="absolute inset-0 z-0">
             <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50"
                 alt="Gedung Aisyah Samawa">
-            <div class="absolute inset-0 bg-gradient-to-b from-purple-900/80 via-purple-800/40 to-indigo-900/90"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-transparent"></div>
         </div>
 
-        <div
-            class="absolute top-0 left-0 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 animate-pulse z-10">
-        </div>
-
-        <div class="max-w-7xl mx-auto text-center relative z-20">
-            <span
-                class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
-                Pondok Pesantren Modern
-            </span>
-
-            <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-8 tracking-tighter drop-shadow-2xl">
-                Mencetak Generasi <br>
-                <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
-                    Aisyah Samawa
+        <div class="max-w-7xl mx-auto px-6 relative z-20 w-full">
+            <div class="max-w-4xl text-left"> 
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
+                    Pondok Pesantren Modern
                 </span>
-            </h1>
 
-            <p
-                class="mt-6 text-lg md:text-2xl text-purple-100 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow-md">
-                Sinergi <span class="text-fuchsia-300 font-bold underline decoration-fuchsia-500/50">Spiritualitas</span>
-                dan <span class="text-indigo-300 font-bold underline decoration-indigo-500/50">Sains</span> untuk melahirkan
-                muslimah pemimpin masa depan.
-            </p>
+                <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
+                    Mencetak Generasi <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
+                        Aisyah Samawa
+                    </span>
+                </h1>
 
-            <div class="mt-12 flex flex-wrap justify-center gap-6">
-                <a href="{{ route('tentang') }}"
-                    class="bg-white text-purple-900 px-10 py-4 rounded-2xl font-black shadow-2xl hover:bg-purple-50 transition-all transform hover:-translate-y-1 text-lg">
-                    PROFIL PONDOK
-                </a>
-                <a href="#ppdb"
-                    class="bg-fuchsia-600/30 backdrop-blur-lg text-white border-2 border-fuchsia-500/50 px-10 py-4 rounded-2xl font-black hover:bg-fuchsia-600 transition-all shadow-lg hover:shadow-fuchsia-500/40 text-lg">
-                    DAFTAR SEKARANG
-                </a>
+                <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
+                    Selamat datang di sumber informasi Pondok Pesantren Aisyah Samawa.
+                </p>
+
+                <p class="italic text-fuchsia-300 text-2xl md:text-3xl font-bold mb-10 drop-shadow-lg">
+                    "Spirituality, Intellectuality, and Morality"
+                </p>
+
+                <div class="flex flex-wrap gap-6 mb-20 md:mb-32">
+                    <a href="#ppdb"
+                        class="bg-fuchsia-600/30 backdrop-blur-lg text-white border-2 border-fuchsia-500/50 px-10 py-4 rounded-2xl font-black hover:bg-fuchsia-600 transition-all shadow-lg text-lg">
+                        DAFTAR PPDB
+                    </a>
+                    <a href="{{ route('tentang') }}"
+                        class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-10 py-4 rounded-2xl font-black hover:bg-white hover:text-purple-900 transition-all text-lg">
+                        PROFIL SEKOLAH
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-30 -mb-16 md:-mb-20">
+                <div class="max-w-xl bg-white/95 backdrop-blur-sm rounded-[1.5rem] p-4 md:p-6 grid grid-cols-3 gap-2 shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-gray-100">
+                    <div class="text-center border-r border-gray-100">
+                        <p class="text-2xl md:text-3xl font-black text-purple-900 leading-none">500 +</p>
+                        <p class="text-gray-400 font-bold uppercase text-[8px] md:text-[10px] tracking-widest mt-1">Santri</p>
+                    </div>
+                    <div class="text-center border-r border-gray-100">
+                        <p class="text-2xl md:text-3xl font-black text-purple-900 leading-none">50 +</p>
+                        <p class="text-gray-400 font-bold uppercase text-[8px] md:text-[10px] tracking-widest mt-1">Pengajar</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl md:text-3xl font-black text-purple-900 leading-none">8 +</p>
+                        <p class="text-gray-400 font-bold uppercase text-[8px] md:text-[10px] tracking-widest mt-1">Tahun</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-28 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-20 items-center">
+    <section class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-20 items-center mt-10">
             <div class="order-2 md:order-1 relative">
                 <div class="absolute -top-4 -left-4 w-20 h-20 bg-purple-100 rounded-full -z-10 opacity-50"></div>
                 <h2 class="text-fuchsia-600 font-black text-xs uppercase tracking-[0.3em] mb-4">Sambutan Kepala Sekolah</h2>
@@ -135,7 +149,7 @@
         </div>
     </section>
 
-    <section class="pt-28 pb-48 bg-white">
+    <section class="py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div>
@@ -174,4 +188,26 @@
         </div>
     </section>
 
+    <section id="ppdb" class="py-24 px-4">
+        <div
+            class="max-w-6xl mx-auto bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 rounded-[3.5rem] p-12 md:p-24 text-center text-white shadow-[0_35px_60px_-15px_rgba(124,58,237,0.5)] relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
+            </div>
+
+            <div class="relative z-10">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Gabung Bersama Kami</h2>
+                <p
+                    class="text-purple-100 mb-12 text-lg md:text-2xl max-w-2xl mx-auto font-medium opacity-90 leading-relaxed">
+                    Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara resmi.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#"
+                        class="bg-white text-purple-900 px-14 py-6 rounded-2xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-xl uppercase tracking-widest">
+                        DAFTAR PPDB ONLINE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

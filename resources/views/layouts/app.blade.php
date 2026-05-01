@@ -200,9 +200,13 @@
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Lokasi Kami</h5>
                     <div class="rounded-2xl overflow-hidden h-48 border border-gray-800 shadow-lg">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15781.011746216447!2d117.41460393955077!3d-8.502897599999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db3907e53f3e1b3%3A0xc48041c2c3639e55!2sSumbawa%20Besar!5e0!3m2!1sid!2sid!4v1700000000000" 
-                            class="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123!2d117.4184589!3d-8.4790876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcbecc5585949eb%3A0xe77bb9822f9cec70!2sPondok%20Pesantren%20'Aisyah%20Samawa!5e0!3m2!1sid!2sid!4v1714543140000!5m2!1sid!2sid" 
+                       class="w-full h-full grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
+                        style="border:0;" 
+                       allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+</iframe>
                     </div>
                 </div>
             </div>
