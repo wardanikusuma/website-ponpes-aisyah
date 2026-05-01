@@ -127,7 +127,6 @@
                         </div>
                     </div>
 
-                    {{-- Link Menu Lainnya --}}
                     <a href="{{ route('lainnya') }}"
                         class="text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors {{ request()->routeIs('lainnya') ? 'text-purple-700' : '' }}">
                         Lainnya
@@ -156,11 +155,11 @@
         @yield('content')
     </main>
 
-    <footer class="relative bg-gray-900 text-white pt-64 pb-16 mt-0">
- 
-
+    <!-- Footer yang sudah dipangkas jarak atas dan bawahnya -->
+    <footer class="relative bg-gray-900 text-white pt-12 pb-8 mt-0">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-16">
+            <!-- pb-10 dikurangi agar tidak terlalu jauh dengan copyright -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-10">
                 <div class="col-span-1">
                     <div class="flex items-center mb-6">
                         <div
@@ -180,14 +179,12 @@
                 <div>
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-8">Navigasi Cepat</h5>
                     <ul class="space-y-4 font-bold text-gray-300 text-sm">
-                        <li><a href="{{ route('tentang') }}#profil" class="hover:text-purple-400 transition">Profil
-                                Pondok</a></li>
+                        <li><a href="{{ route('tentang') }}#profil" class="hover:text-purple-400 transition">Tentang</a></li>
                         <li><a href="{{ route('akademik') }}" class="hover:text-purple-400 transition">Akademik</a>
                         </li>
                         <li><a href="{{ route('kesiswaan.prestasi') }}"
                                 class="hover:text-purple-400 transition">Kesiswaan</a></li>
-                        <li><a href="{{ route('lainnya') }}" class="hover:text-purple-400 transition">Layanan
-                                Informasi</a></li>
+                        <li><a href="{{ route('lainnya') }}" class="hover:text-purple-400 transition">Lainnya</a></li>
                     </ul>
                 </div>
 
@@ -213,7 +210,8 @@
                 </div>
             </div>
 
-            <div class="pt-8 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.3em]">
+            <!-- pt-6 dikurangi agar teks copyright lebih dekat ke garis -->
+            <div class="pt-6 text-center text-gray-500 text-xs font-bold uppercase tracking-[0.3em]">
                 <p>© 2026 PP Aisyah Samawa. Designed for Excellence.</p>
             </div>
         </div>

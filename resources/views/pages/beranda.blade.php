@@ -12,15 +12,13 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-20 w-full">
             <div class="max-w-4xl text-left"> 
-                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
-                    Pondok Pesantren Modern
-                </span>
 
-                <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
-                    Mencetak Generasi <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
-                        Aisyah Samawa
-                    </span>
+
+                <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
+                        Membentuk Generasi yang <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
+                            Berilmu dan Berakhlak
+                        </span>
                 </h1>
 
                 <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
@@ -82,8 +80,7 @@
                     <div class="w-16 h-1 bg-gradient-to-r from-fuchsia-600 to-transparent"></div>
                     <div>
                         <p class="font-black text-gray-900 text-xl tracking-tight">Tia Kusuma Wardani, S.Mat.</p>
-                        <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">Pimpinan Pondok Pesantren
-                        </p>
+                        <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">Pimpinan Pondok Pesantren</p>
                     </div>
                 </div>
             </div>
@@ -111,6 +108,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{-- Card Header MISI --}}
                 <div
                     class="p-10 rounded-[2.5rem] bg-gray-900 text-white flex flex-col justify-center relative overflow-hidden group shadow-2xl">
                     <div
@@ -121,18 +119,19 @@
                         muslimah berkualitas dunia akhirat.</p>
                 </div>
 
+                {{-- Misi 1 --}}
                 <div
                     class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
                     <div
                         class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
                         1</div>
                     <p class="text-gray-800 text-lg font-bold leading-relaxed">
-                        Menyelenggarakan sistem pendidikan berkualitas dalam frame islami sesuai manhaj
-                        <span class="text-purple-700 font-black underline decoration-purple-200">Ahlus Sunnah Wal
-                            Jamah.</span>
+                        Menyelenggarakan sistem pendidikan yang berkualitas dalam frame islami sesuai dengan manhaj
+                        <span class="text-purple-700 font-black underline decoration-purple-200">Ahlus Sunnah Wal Jamah.</span>
                     </p>
                 </div>
 
+                {{-- Misi 2 --}}
                 <div
                     class="p-10 rounded-[2.5rem] bg-gradient-to-br from-purple-700 to-fuchsia-800 text-white shadow-2xl shadow-purple-200 relative overflow-hidden group">
                     <div
@@ -144,6 +143,146 @@
                     <p class="leading-relaxed text-xl font-black italic">
                         "Mengupayakan maksimal Tahfidz Al-Qur'an & Sains sebagai Brand Pesantren."
                     </p>
+                </div>
+
+                {{-- Misi 3 --}}
+                <div
+                    class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
+                        3</div>
+                    <p class="text-gray-800 text-lg font-bold leading-relaxed">
+                        Menumbuhkan pemahaman yang mendalam tentang dasar perilaku islami serta
+                        <span class="text-purple-700 font-black underline decoration-purple-200">budaya bangsa.</span>
+                    </p>
+                </div>
+
+                {{-- Misi 4 --}}
+                <div
+                    class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
+                        4</div>
+                    <p class="text-gray-800 text-lg font-bold leading-relaxed">
+                        Melaksanakan pendidikan dan pembelajaran secara efektif dan menyenangkan dengan tetap mengacu pada
+                        <span class="text-purple-700 font-black underline decoration-purple-200">moralitas dan akhlakul karimah.</span>
+                    </p>
+                </div>
+
+                {{-- Misi 5 --}}
+                <div
+                    class="p-10 rounded-[2.5rem] bg-gradient-to-br from-purple-700 to-fuchsia-800 text-white shadow-2xl shadow-purple-200 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700">
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-white/20 backdrop-blur-md text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 border border-white/30">
+                        5</div>
+                    <p class="leading-relaxed text-xl font-black italic">
+                        "Menyelenggarakan pendidikan yang kreatif, inovatif, dan variatif dalam nuansa lingkungan pondok pesantren."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- SECTION: PROGRAM UNGGULAN --}}
+    <section class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-fuchsia-600 font-black tracking-[0.4em] text-sm mb-4 uppercase">Keunggulan Kami</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter">Program <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-fuchsia-600">Unggulan</span></h3>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <style>
+                .flip-card { perspective: 1000px; }
+                .flip-card-inner { position: relative; width: 100%; height: 380px; transform-style: preserve-3d; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+                .flip-card:hover .flip-card-inner, .flip-card.active .flip-card-inner { transform: rotateY(180deg); }
+                .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 2.5rem; overflow: hidden; }
+                .flip-card-back { transform: rotateY(180deg); }
+            </style>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {{-- Program 1: Tahfidz --}}
+                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner shadow-xl">
+                        {{-- DEPAN --}}
+                        <div class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
+                            <div class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
+                                📖
+                            </div>
+                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
+                                Tahfidz Qur'an<br><span class="text-purple-700">30 Juz</span>
+                            </h4>
+                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                        </div>
+                        {{-- BELAKANG --}}
+                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12" style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
+                            <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">📖</div>
+                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
+                                Tahfidz Qur'an <span class="text-fuchsia-300">30 Juz</span>
+                            </h4>
+                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
+                                Program unggulan hafalan Al-Qur'an 30 juz dengan metode talaqqi yang terbimbing, mutqin, dan terstruktur bersama para hafizah berpengalaman.
+                            </p>
+                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Program 2: Bilingual --}}
+                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner shadow-xl">
+                        {{-- DEPAN --}}
+                        <div class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
+                            <div class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
+                                🌍
+                            </div>
+                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
+                                Bilingual<br><span class="text-purple-700">(Arab & Inggris)</span>
+                            </h4>
+                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                        </div>
+                        {{-- BELAKANG --}}
+                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12" style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
+                            <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">🌍</div>
+                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
+                                Bilingual <span class="text-fuchsia-300">(Arab & Inggris)</span>
+                            </h4>
+                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
+                                Pembelajaran intensif dua bahasa internasional — Arab dan Inggris — sebagai bekal komunikasi global yang berlandaskan nilai islami.
+                            </p>
+                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Program 3: Kitab Kuning --}}
+                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
+                    <div class="flip-card-inner shadow-xl">
+                        {{-- DEPAN --}}
+                        <div class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
+                            <div class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
+                                📚
+                            </div>
+                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
+                                Kajian<br><span class="text-purple-700">Kitab Kuning</span>
+                            </h4>
+                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                        </div>
+                        {{-- BELAKANG --}}
+                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12" style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
+                            <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">📚</div>
+                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
+                                Kajian <span class="text-fuchsia-300">Kitab Kuning</span>
+                            </h4>
+                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
+                                Pengkajian mendalam kitab-kitab klasik ulama salaf sebagai fondasi pemahaman agama yang kokoh sesuai manhaj Ahlus Sunnah Wal Jamah.
+                            </p>
+                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
