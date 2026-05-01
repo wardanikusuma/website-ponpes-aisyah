@@ -157,21 +157,7 @@
     </main>
 
     <footer class="relative bg-gray-900 text-white pt-64 pb-16 mt-0">
-        @if (!Request::is('akademik*'))
-            <div class="absolute -top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-30">
-                <div class="bg-white rounded-[2.5rem] p-10 md:p-14 text-center shadow-2xl border border-purple-100">
-                    <h2 class="text-purple-700 font-black tracking-[0.4em] text-xs mb-4 uppercase">Daftar PPDB</h2>
-                    <p class="text-gray-600 mb-8 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
-                        Jadilah bagian dari keluarga besar Aisyah Samawa. Pendaftaran TA 2026/2027 telah dibuka secara
-                        resmi.
-                    </p>
-                    <a href="{{ route('akademik') }}#ppdb"
-                        class="inline-block bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-10 py-4 rounded-xl font-black hover:shadow-lg hover:shadow-purple-500/40 transition-all text-sm uppercase tracking-widest">
-                        Daftar Sekarang
-                    </a>
-                </div>
-            </div>
-        @endif
+ 
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-16">

@@ -3,34 +3,38 @@
 @section('title', 'Kesiswaan')
 
 @section('content')
-    {{-- HERO SECTION: LAYERED DEPTH --}}
-    <section class="relative py-40 md:py-60 px-4 overflow-hidden bg-slate-950">
+    {{-- HERO SECTION: SAMA PERSIS DENGAN BERANDA --}}
+    <section class="relative min-h-screen flex items-center pt-20 bg-purple-900">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center scale-105"
+            <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50"
                 alt="Kegiatan Kesiswaan">
-            {{-- Overlay Gradasi yang lebih modern --}}
-            <div class="absolute inset-0 bg-gradient-to-tr from-purple-900 via-purple-900/40 to-transparent"></div>
-            <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-transparent"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto text-center relative z-20">
-            <span
-                class="inline-block px-6 py-2 mb-8 text-[10px] font-black tracking-[0.4em] text-fuchsia-300 uppercase bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-2xl">
-                Layanan Kesiswaan
-            </span>
-            <h1
-                class="text-6xl md:text-9xl font-black text-white leading-tight mb-8 tracking-tighter drop-shadow-2xl uppercase italic">
-                Life at <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-purple-200 to-indigo-300">PONDOK</span>
-            </h1>
-            <p class="mt-6 text-xl md:text-2xl text-purple-100/80 max-w-4xl mx-auto font-light leading-relaxed">
-                Membentuk karakter melalui <span class="font-bold text-fuchsia-400">kreativitas</span> dan
-                eksplorasi <span class="font-bold text-indigo-300">prestasi</span>.
-            </p>
+        <div class="max-w-7xl mx-auto px-6 relative z-20 w-full">
+            <div class="text-center">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
+                    Layanan Kesiswaan
+                </span>
+
+                <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
+                    Life at <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
+                        Aisyah Samawa
+                    </span>
+                </h1>
+
+                <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
+                    Membentuk karakter melalui kreativitas dan eksplorasi prestasi.
+                </p>
+
+
+
+            </div>
         </div>
     </section>
 
-    {{-- SECTION: PRESTASI (MODERN NEUMORPHIC CARDS) --}}
+    {{-- SECTION: PRESTASI --}}
     <section id="prestasi" class="py-32 bg-slate-50 scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-6 mb-20">
@@ -50,29 +54,25 @@
                                 class="w-24 h-24 bg-gradient-to-br {{ $p['color'] }} rounded-[2rem] flex items-center justify-center text-5xl shadow-2xl mb-8 transform group-hover:rotate-6 transition-transform duration-500">
                                 {{ $p['icon'] }}
                             </div>
-                            <span
-                                class="text-fuchsia-600 font-black tracking-[0.2em] text-xs mb-3 uppercase">{{ $p['year'] }}</span>
-                            <h4
-                                class="text-3xl font-black text-slate-800 uppercase tracking-tighter text-center leading-tight">
+                            <span class="text-fuchsia-600 font-black tracking-[0.2em] text-xs mb-3 uppercase">{{ $p['year'] }}</span>
+                            <h4 class="text-3xl font-black text-slate-800 uppercase tracking-tighter text-center leading-tight">
                                 {{ $p['title'] }}</h4>
-                            <p class="mt-4 text-slate-500 text-center text-sm font-medium">Membanganggakan umat melalui
+                            <p class="mt-4 text-slate-500 text-center text-sm font-medium">Membanggakan umat melalui
                                 dedikasi dan hafalan yang mutqin.</p>
                         </div>
-                        {{-- Decorative Element --}}
-                        <div
-                            class="absolute -bottom-10 -right-10 w-40 h-40 bg-slate-50 rounded-full group-hover:bg-purple-50 transition-colors duration-500">
-                        </div>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-slate-50 rounded-full group-hover:bg-purple-50 transition-colors duration-500"></div>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    {{-- SECTION: EKSTRAKURIKULER (SOFT GLASS TILES) --}}
-    <section id="ekstrakurikuler" class="py-32 bg-white scroll-mt-24">
+    {{-- SECTION: EKSTRAKURIKULER --}}
+    <section id="ekstrakurikuler" class="py-28 bg-white scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-24">
-                <h3 class="text-4xl font-black text-slate-900 uppercase tracking-tighter">Minat & Bakat</h3>
+            <div class="text-center mb-20">
+                <h2 class="text-fuchsia-600 font-black tracking-[0.4em] text-sm mb-4 uppercase">Kegiatan Santri</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter">Minat &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-fuchsia-600">Bakat</span></h3>
                 <div class="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-6 rounded-full"></div>
             </div>
 
@@ -92,12 +92,10 @@
                 @foreach ($ekskuls as $e)
                     <div
                         class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-purple-200 transition-all duration-300 text-center group cursor-default">
-                        <div
-                            class="text-4xl mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+                        <div class="text-4xl mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
                             {{ $e['i'] }}
                         </div>
-                        <h4
-                            class="font-bold text-slate-700 uppercase text-[11px] tracking-widest group-hover:text-purple-700 transition-colors">
+                        <h4 class="font-bold text-slate-700 uppercase text-[11px] tracking-widest group-hover:text-purple-700 transition-colors">
                             {{ $e['n'] }}</h4>
                     </div>
                 @endforeach
@@ -105,60 +103,59 @@
         </div>
     </section>
 
-    {{-- SECTION: BERITA (DARK MODE CONTRAST) --}}
-    <section id="berita" class="py-32 bg-slate-950 scroll-mt-24 overflow-hidden relative">
-        <div
-            class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,_rgba(124,58,237,0.1),_transparent_50%)]">
-        </div>
-
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="flex justify-between items-end mb-20 border-b border-white/10 pb-8">
-                <h3 class="text-4xl font-black text-white uppercase tracking-tighter">Warta Pondok</h3>
+    {{-- SECTION: BERITA --}}
+    <section id="berita" class="py-28 bg-white scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-black text-gray-900 tracking-tight italic">Warta <span class="text-fuchsia-600">Pondok</span></h2>
+                    <p class="text-gray-500 mt-3 text-lg font-medium">Kegiatan, prestasi, dan inspirasi harian santriwati.</p>
+                </div>
                 <a href="#"
-                    class="text-fuchsia-400 font-bold text-sm tracking-widest hover:text-white transition uppercase">Lihat
-                    Semua →</a>
+                    class="group flex items-center gap-3 text-purple-700 font-black uppercase text-sm tracking-widest mt-6 md:mt-0">
+                    Lihat Semua
+                    <span class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center group-hover:bg-purple-700 group-hover:text-white transition-all shadow-sm">→</span>
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 @for ($i = 0; $i < 2; $i++)
                     <div class="group cursor-pointer">
-                        <div
-                            class="aspect-video rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl relative border border-white/5">
+                        <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
                             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                class="w-full h-full object-cover transition duration-700 group-hover:scale-105 brightness-90 group-hover:brightness-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent">
-                            </div>
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                alt="Berita">
                             <div class="absolute bottom-6 left-6">
-                                <span
-                                    class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Update</span>
+                                <span class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">
+                                    Update
+                                </span>
                             </div>
                         </div>
-                        <h4
-                            class="text-2xl font-black text-white uppercase group-hover:text-fuchsia-400 transition-colors duration-300 leading-tight">
-                            Workshop Literasi Digital bagi Santriwati Era Gen-Z</h4>
-                        <p class="text-slate-400 mt-4 leading-relaxed font-light italic">"Membekali muslimah dengan adab dan
-                            kecerdasan dalam menggunakan teknologi."</p>
+                        <h3 class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
+                            Workshop Literasi Digital bagi Santriwati Era Gen-Z
+                        </h3>
+                        <p class="text-gray-500 mt-3 font-medium italic">"Membekali muslimah dengan adab dan kecerdasan dalam menggunakan teknologi."</p>
                     </div>
                 @endfor
             </div>
         </div>
     </section>
 
-    {{-- SECTION: PPDB (VIBRANT GRADIENT BOX) --}}
-    <section id="ppdb" class="py-32 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div
-                class="relative rounded-[3.5rem] p-16 md:p-24 overflow-hidden shadow-[0_40px_100px_-20px_rgba(124,58,237,0.3)]">
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-700 via-purple-800 to-fuchsia-600"></div>
+    {{-- SECTION: PPDB --}}
+    <section id="ppdb" class="py-24 px-4">
+        <div
+            class="max-w-6xl mx-auto bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 rounded-[3.5rem] p-12 md:p-24 text-center text-white shadow-[0_35px_60px_-15px_rgba(124,58,237,0.5)] relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
 
-                <div class="relative z-10 text-center text-white">
-                    <h2 class="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase">Mulai Langkahmu</h2>
-                    <p class="text-purple-100 italic mb-12 text-lg md:text-2xl opacity-90 font-light max-w-2xl mx-auto">
-                        "Bergabung bersama kami mencetak generasi muslimah yang kokoh dalam iman dan unggul dalam prestasi."
-                    </p>
+            <div class="relative z-10">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Mulai Langkahmu</h2>
+                <p class="text-purple-100 mb-12 text-lg md:text-2xl max-w-2xl mx-auto font-medium opacity-90 leading-relaxed">
+                    Bergabung bersama kami mencetak generasi muslimah yang kokoh dalam iman dan unggul dalam prestasi. Pendaftaran TA 2026/2027 telah dibuka.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
                     <a href="#"
-                        class="inline-block bg-white text-purple-900 px-14 py-5 rounded-2xl font-black hover:scale-105 active:scale-95 transition-all uppercase tracking-[0.2em] text-sm shadow-xl">
-                        Daftar PPDB 2026
+                        class="bg-white text-purple-900 px-14 py-6 rounded-2xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-xl uppercase tracking-widest">
+                        DAFTAR PPDB ONLINE
                     </a>
                 </div>
             </div>
