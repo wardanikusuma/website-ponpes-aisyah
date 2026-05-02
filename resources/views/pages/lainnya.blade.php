@@ -3,7 +3,7 @@
 @section('title', 'Lainnya - Informasi & Kontak')
 
 @section('content')
-    {{-- HERO SECTION (sama kayak Beranda) --}}
+    {{-- HERO SECTION --}}
     <section class="relative min-h-screen flex items-center pt-20 bg-purple-900">
         <div class="absolute inset-0 z-0">
             <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50" alt="Gedung Aisyah Samawa">
@@ -26,8 +26,6 @@
                 <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
                     Akses layanan informasi pondok pesantren melalui kanal di bawah ini.
                 </p>
-
-
             </div>
         </div>
     </section>
@@ -49,7 +47,7 @@
         </div>
 
         {{-- LAYANAN INFORMASI --}}
-        <div class="mb-32">
+        <div id="layanan" class="mb-32 scroll-mt-24">
             <div class="text-center mb-16">
                 <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.5em] mb-4">Layanan Informasi</h3>
                 <div class="w-12 h-1 bg-purple-200 mx-auto rounded-full"></div>
@@ -61,6 +59,7 @@
                         ['t' => 'WhatsApp Center', 'd' => 'Hubungi admin untuk tanya jawab cepat.', 'i' => '💬', 'c' => 'from-green-400 to-emerald-600'],
                         ['t' => 'Email Akademik', 'd' => 'Pertanyaan seputar kurikulum dan pendaftaran.', 'i' => '📧', 'c' => 'from-blue-400 to-indigo-600'],
                         ['t' => 'Instagram Resmi', 'd' => 'Update kegiatan harian santriwati.', 'i' => '📸', 'c' => 'from-fuchsia-500 to-purple-600'],
+                        ['t' => 'Facebook Resmi', 'd' => 'Komunitas dan informasi berita terbaru.', 'i' => '👥', 'c' => 'from-blue-600 to-blue-800'],
                         ['t' => 'Saluran YouTube', 'd' => 'Dokumentasi video acara besar pondok.', 'i' => '🎥', 'c' => 'from-red-500 to-orange-600'],
                     ];
                 @endphp
@@ -82,31 +81,41 @@
             </div>
         </div>
 
-        {{-- FOOTER SECTION (LOGO & MAPS) --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center border-t border-slate-100 pt-20">
-            <div class="text-center md:text-left">
-                <div class="w-20 h-20 bg-purple-100 rounded-full mx-auto md:mx-0 mb-6 flex items-center justify-center">
-                    <span class="text-2xl font-black text-purple-600 italic">AS</span>
-                </div>
-                <h3 class="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-4">Ponpes Aisyah Samawa</h3>
-                <p class="text-slate-500 text-sm leading-relaxed max-w-sm mx-auto md:mx-0 font-medium">
-                    Mencetak muslimah pemimpin masa depan yang kokoh dalam spiritualitas dan unggul dalam sains.
+        {{-- KEMITRAAN / PARTNERSHIP --}}
+        <div id="kemitraan" class="mt-32 scroll-mt-24">
+            <div class="text-center mb-12">
+                <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.5em] mb-4">Kemitraan Strategis</h3>
+                <div class="w-12 h-1 bg-purple-200 mx-auto rounded-full"></div>
+                <p class="text-slate-500 mt-6 max-w-lg mx-auto text-sm font-medium">
+                    Bekerjasama dengan institusi terpercaya untuk meningkatkan kualitas pendidikan dan pelayanan.
                 </p>
             </div>
 
-            <div class="relative group">
-                <div class="absolute -inset-4 bg-gradient-to-tr from-purple-500/20 to-fuchsia-500/20 rounded-[3rem] blur-2xl opacity-50"></div>
-                <div class="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15838.749539356162!2d110.364719!3d-7.795579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDcnNDQuMSJTIDExMMKwMjInNTMuMCJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid"
-                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000" allowfullscreen="" loading="lazy">
-                    </iframe>
-                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
-                        <div class="w-16 h-16 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-2xl">
-                            <span class="text-2xl">📍</span>
-                        </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                @php
+                    $mitra = [
+                        ['nama' => 'Kemenag RI', 'logo' => 'kemenag.png'],
+                        ['nama' => 'Bank Syariah', 'logo' => 'bsi.png'],
+                        ['nama' => 'Yayasan Pendidikan', 'logo' => 'yayasan.png'],
+                        ['nama' => 'Lembaga Zakat', 'logo' => 'lazis.png'],
+                    ];
+                @endphp
+
+                @foreach ($mitra as $m)
+                    <div class="group p-8 bg-slate-50/50 rounded-[2rem] border border-transparent hover:border-purple-100 hover:bg-white transition-all duration-500 flex items-center justify-center">
+                        <img src="{{ asset('assets/img/mitra/' . $m['logo']) }}"
+                             alt="{{ $m['nama'] }}"
+                             class="h-12 md:h-16 w-auto object-contain filter grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
                     </div>
-                </div>
+                @endforeach
+            </div>
+
+            {{-- FOOTER KECIL UNTUK AJAKAN KERJASAMA --}}
+            <div class="mt-12 text-center">
+                <p class="text-slate-400 text-xs italic">
+                    Ingin menjalin kerjasama dengan Pondok Pesantren?
+                    <a href="mailto:kemitraan@email.com" class="text-purple-600 font-bold hover:underline ml-1">Ajukan Proposal →</a>
+                </p>
             </div>
         </div>
 
