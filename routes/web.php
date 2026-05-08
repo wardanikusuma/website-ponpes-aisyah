@@ -39,5 +39,15 @@ Route::prefix('kesiswaan')->group(function () {
     Route::get('/berita', [StaticPageController::class, 'berita'])->name('kesiswaan.berita');
 });
 
+// 5. ROUTE PENDAFTARAN (PPDB ONLINE)
+Route::prefix('ppdb')->group(function () {
+    Route::get('/', [App\Http\Controllers\PendaftaranController::class, 'landing'])->name('ppdb.landing');
+    Route::get('/daftar/paud', [App\Http\Controllers\PendaftaranController::class, 'createPaud'])->name('ppdb.daftar.paud');
+    Route::post('/daftar/paud', [App\Http\Controllers\PendaftaranController::class, 'storePaud']);
+    Route::get('/daftar/sekolah', [App\Http\Controllers\PendaftaranController::class, 'createSekolah'])->name('ppdb.daftar.sekolah');
+    Route::post('/daftar/sekolah', [App\Http\Controllers\PendaftaranController::class, 'storeSekolah']);
+    Route::get('/success', [App\Http\Controllers\PendaftaranController::class, 'success'])->name('ppdb.success');
+});
+
 
 Route::get('/lainnya', [StaticPageController::class, 'lainnya'])->name('lainnya');

@@ -86,7 +86,7 @@
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Kurikulum</a>
                             <a href="{{ route('akademik') }}#unggulan"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program Unggulan</a>
-                            <a href="{{ route('akademik') }}#ppdb"
+                            <a href="{{ route('ppdb.landing') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB Online</a>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('akademik') }}#ppdb"
+                    <a href="{{ route('ppdb.landing') }}"
                         class="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-tighter shadow-lg shadow-purple-200 hover:shadow-purple-400 transition-all transform hover:-translate-y-1">
                         PPDB ONLINE
                     </a>
