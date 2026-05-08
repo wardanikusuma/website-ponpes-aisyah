@@ -111,4 +111,8 @@ Route::prefix('ppdb')->group(function () {
     Route::get('/daftar/sekolah', [App\Http\Controllers\PendaftaranController::class, 'createSekolah'])->name('ppdb.daftar.sekolah');
     Route::post('/daftar/sekolah', [App\Http\Controllers\PendaftaranController::class, 'storeSekolah']);
     Route::get('/success', [App\Http\Controllers\PendaftaranController::class, 'success'])->name('ppdb.success');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> c3b48e9cbc1346cbd8068de572c7d16d6cf8d096
