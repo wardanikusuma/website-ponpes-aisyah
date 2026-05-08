@@ -19,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        \Illuminate\Database\Eloquent\Relations\Relation::morphMap([
+            'paud' => \App\Models\PendaftaranPaud::class,
+            'sma_smp_sd' => \App\Models\PendaftaranSmaSmpSd::class,
+        ]);
     }
 }

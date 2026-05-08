@@ -2,24 +2,40 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\SuperAdmin;
+use App\Models\Admin;
+use App\Models\Tendik;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        SuperAdmin::updateOrCreate(
+            ['email' => 'superadmin@aisyah.com'],
+            [
+                'nama' => 'Super Admin',
+                'password' => Hash::make('password'),
+            ]
+        );
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Admin::updateOrCreate(
+            ['email' => 'adminsma@aisyah.com'],
+            [
+                'nama' => 'Admin SMA',
+                'password' => Hash::make('password'),
+                'jenjang' => 'SMA',
+            ]
+        );
+
+        Tendik::updateOrCreate(
+            ['email' => 'ahmad@aisyah.com'],
+            [
+                'nama' => 'Ustadz Ahmad',
+                'password' => Hash::make('password'),
+                'jenjang' => 'SMA',
+            ]
+        );
     }
 }

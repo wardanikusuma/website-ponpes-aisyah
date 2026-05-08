@@ -27,9 +27,6 @@
                 <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
                     Membentuk karakter melalui kreativitas dan eksplorasi prestasi.
                 </p>
-
-
-
             </div>
         </div>
     </section>
@@ -46,23 +43,28 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                @foreach ([['title' => 'Juara MHQ Nasional', 'year' => '2025', 'icon' => '🏆', 'color' => 'from-amber-400 to-orange-500'], ['title' => 'Medali KSN Matematika', 'year' => '2024', 'icon' => '🥈', 'color' => 'from-slate-300 to-slate-500']] as $p)
+                @forelse ($prestasi as $p)
                     <div
                         class="group relative bg-white rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(124,58,237,0.1)] border border-slate-100 overflow-hidden">
                         <div class="p-12 h-full flex flex-col items-center relative z-10">
                             <div
-                                class="w-24 h-24 bg-gradient-to-br {{ $p['color'] }} rounded-[2rem] flex items-center justify-center text-5xl shadow-2xl mb-8 transform group-hover:rotate-6 transition-transform duration-500">
-                                {{ $p['icon'] }}
+                                class="w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-[2rem] flex items-center justify-center text-5xl shadow-2xl mb-8 transform group-hover:rotate-6 transition-transform duration-500 overflow-hidden">
+                                @if($p->gambar)
+                                    <img src="{{ asset('storage/' . $p->gambar) }}" class="w-full h-full object-cover">
+                                @else
+                                    🏆
+                                @endif
                             </div>
-                            <span class="text-fuchsia-600 font-black tracking-[0.2em] text-xs mb-3 uppercase">{{ $p['year'] }}</span>
+                            <span class="text-fuchsia-600 font-black tracking-[0.2em] text-xs mb-3 uppercase">{{ $p->tahun }}</span>
                             <h4 class="text-3xl font-black text-slate-800 uppercase tracking-tighter text-center leading-tight">
-                                {{ $p['title'] }}</h4>
-                            <p class="mt-4 text-slate-500 text-center text-sm font-medium">Membanggakan umat melalui
-                                dedikasi dan hafalan yang mutqin.</p>
+                                {{ $p->nama_prestasi }}</h4>
+                            <p class="mt-4 text-slate-500 text-center text-sm font-medium">{{ $p->deskripsi ?? 'Membanggakan umat melalui dedikasi dan hafalan yang mutqin.' }}</p>
                         </div>
                         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-slate-50 rounded-full group-hover:bg-purple-50 transition-colors duration-500"></div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="col-span-2 text-center py-10 text-slate-400 italic">Belum ada data prestasi.</div>
+                @endforelse
             </div>
         </div>
     </section>
@@ -77,28 +79,22 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                @php
-                    $ekskuls = [
-                        ['n' => 'Tahfidz Plus', 'i' => '📖'],
-                        ['n' => 'Coding Lab', 'i' => '💻'],
-                        ['n' => 'Panahan', 'i' => '🏹'],
-                        ['n' => 'Bahasa Arab', 'i' => '🌍'],
-                        ['n' => 'Kaligrafi', 'i' => '✒️'],
-                        ['n' => 'Sains Club', 'i' => '🧪'],
-                        ['n' => 'Jurnalistik', 'i' => '📸'],
-                        ['n' => 'Bela Diri', 'i' => '🥋'],
-                    ];
-                @endphp
-                @foreach ($ekskuls as $e)
+                @forelse ($eskul as $e)
                     <div
                         class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-purple-200 transition-all duration-300 text-center group cursor-default">
-                        <div class="text-4xl mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                            {{ $e['i'] }}
+                        <div class="w-20 h-20 mx-auto bg-white rounded-2xl flex items-center justify-center text-4xl mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 overflow-hidden border border-slate-100">
+                            @if($e->gambar)
+                                <img src="{{ asset('storage/' . $e->gambar) }}" class="w-full h-full object-cover">
+                            @else
+                                ✨
+                            @endif
                         </div>
                         <h4 class="font-bold text-slate-700 uppercase text-[11px] tracking-widest group-hover:text-purple-700 transition-colors">
-                            {{ $e['n'] }}</h4>
+                            {{ $e->nama_eskul }}</h4>
                     </div>
-                @endforeach
+                @empty
+                    <div class="col-span-4 text-center py-10 text-slate-400 italic">Belum ada data ekstrakurikuler.</div>
+                @endforelse
             </div>
         </div>
     </section>
@@ -111,32 +107,35 @@
                     <h2 class="text-4xl font-black text-gray-900 tracking-tight italic">Warta <span class="text-fuchsia-600">Pondok</span></h2>
                     <p class="text-gray-500 mt-3 text-lg font-medium">Kegiatan, prestasi, dan inspirasi harian santriwati.</p>
                 </div>
-                <a href="#"
-                    class="group flex items-center gap-3 text-purple-700 font-black uppercase text-sm tracking-widest mt-6 md:mt-0">
-                    Lihat Semua
-                    <span class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center group-hover:bg-purple-700 group-hover:text-white transition-all shadow-sm">→</span>
-                </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                @for ($i = 0; $i < 2; $i++)
+                @forelse ($berita as $b)
                     <div class="group cursor-pointer">
                         <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
-                                alt="Berita">
+                            @if($b->foto)
+                                <img src="{{ asset('storage/' . $b->foto) }}"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                    alt="{{ $b->judul }}">
+                            @else
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                    alt="Berita">
+                            @endif
                             <div class="absolute bottom-6 left-6">
                                 <span class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">
-                                    Update
+                                    {{ $b->kategori ?? 'Update' }}
                                 </span>
                             </div>
                         </div>
                         <h3 class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
-                            Workshop Literasi Digital bagi Santriwati Era Gen-Z
+                            {{ $b->judul }}
                         </h3>
-                        <p class="text-gray-500 mt-3 font-medium italic">"Membekali muslimah dengan adab dan kecerdasan dalam menggunakan teknologi."</p>
+                        <p class="text-gray-500 mt-3 font-medium italic">"{{ Str::limit($b->narasi, 100) }}"</p>
                     </div>
-                @endfor
+                @empty
+                    <div class="col-span-2 text-center py-10 text-slate-400 italic">Belum ada warta pondok.</div>
+                @endforelse
             </div>
         </div>
     </section>
@@ -153,7 +152,7 @@
                     Bergabung bersama kami mencetak generasi muslimah yang kokoh dalam iman dan unggul dalam prestasi. Pendaftaran TA 2026/2027 telah dibuka.
                 </p>
                 <div class="flex flex-wrap justify-center gap-6">
-                    <a href="#"
+                    <a href="{{ route('ppdb.landing') }}"
                         class="bg-white text-purple-900 px-14 py-6 rounded-2xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all text-xl uppercase tracking-widest">
                         DAFTAR PPDB ONLINE
                     </a>

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KontenYayasan;
+use App\Models\KontenBerita;
+use App\Models\KontenPrestasi;
+use App\Models\KontenEskul;
 use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
@@ -9,7 +13,10 @@ class StaticPageController extends Controller
     // 1. Beranda
     public function beranda()
     {
-        return view('pages.beranda');
+        $yayasan = KontenYayasan::first();
+        $berita = KontenBerita::latest()->take(3)->get();
+        $prestasi = KontenPrestasi::latest()->take(4)->get();
+        return view('pages.beranda', compact('yayasan', 'berita', 'prestasi'));
     }
 
     // 2. Menu Tentang (Single Page)
@@ -50,7 +57,10 @@ class StaticPageController extends Controller
     // 4. Menu Kesiswaan (Single Page)
     public function kesiswaan()
     {
-        return view('pages.kesiswaan');
+        $berita = KontenBerita::latest()->get();
+        $prestasi = KontenPrestasi::latest()->get();
+        $eskul = KontenEskul::latest()->get();
+        return view('pages.kesiswaan', compact('berita', 'prestasi', 'eskul'));
     }
 
     public function prestasi()
