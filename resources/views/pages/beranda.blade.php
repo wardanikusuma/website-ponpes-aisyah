@@ -88,6 +88,12 @@
                     <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">
                         Pimpinan Pondok Pesantren
                     </p>
+                    <p class="font-black text-gray-900 text-xl tracking-tight">
+                        {{ $yayasan->nama_kepala_yayasan ?? 'Dr. Munajat Lc. M.Hi' }}
+                    </p>
+                    <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">
+                        Pimpinan Pondok Pesantren
+                    </p>
                     </div>
                 </div>
             </div>
