@@ -102,6 +102,18 @@ class PendaftaranController extends Controller
                 'jenjang' => 'PAUD',
                 'no_pendaftaran' => $noPendaftaran
             ]);
+
+            // Reset status pengumuman kembali menjadi abu-abu untuk pendaftar baru
+            $kontenUmum = \App\Models\KontenUmum::first();
+            if ($kontenUmum) {
+                $kontenUmum->update([
+                    'is_announced_paud' => false,
+                    'is_announced_administrasi_paud' => false,
+                    'is_announced_akademik_paud' => false,
+                    'is_announced_wawancara_paud' => false,
+                    'is_announced_alquran_paud' => false,
+                ]);
+            }
         });
 
         // Kirim Email di luar transaksi agar data sudah masuk ke DB
@@ -224,6 +236,19 @@ class PendaftaranController extends Controller
                 'jenjang' => $validated['jenjang'],
                 'no_pendaftaran' => $noPendaftaran
             ]);
+
+            // Reset status pengumuman kembali menjadi abu-abu untuk pendaftar baru
+            $jenjangLower = strtolower($validated['jenjang']);
+            $kontenUmum = \App\Models\KontenUmum::first();
+            if ($kontenUmum) {
+                $kontenUmum->update([
+                    "is_announced_{$jenjangLower}" => false,
+                    "is_announced_administrasi_{$jenjangLower}" => false,
+                    "is_announced_akademik_{$jenjangLower}" => false,
+                    "is_announced_wawancara_{$jenjangLower}" => false,
+                    "is_announced_alquran_{$jenjangLower}" => false,
+                ]);
+            }
         });
 
         // Kirim Email di luar transaksi

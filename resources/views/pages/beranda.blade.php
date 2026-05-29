@@ -82,14 +82,12 @@
                 <div class="mt-10 flex items-center gap-4">
                     <div class="w-16 h-1 bg-gradient-to-r from-fuchsia-600 to-transparent"></div>
                     <div>
-<<<<<<< HEAD
-                        <p class="font-black text-gray-900 text-xl tracking-tight">{{ $yayasan->nama_kepala_yayasan ?? 'Tia Kusuma Wardani, S.Mat.' }}</p>
-                        <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">Pimpinan Pondok Pesantren</p>
-=======
-                        <p class="font-black text-gray-900 text-xl tracking-tight">Tia Kusuma Wardani, S.Mat.</p>
-                        <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">Pimpinan Pondok Pesantren
-                        </p>
->>>>>>> c3b48e9cbc1346cbd8068de572c7d16d6cf8d096
+                    <p class="font-black text-gray-900 text-xl tracking-tight">
+                        {{ $yayasan->nama_kepala_yayasan ?? 'Dr. Munajat Lc. M.Hi' }}
+                    </p>
+                    <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">
+                        Pimpinan Pondok Pesantren
+                    </p>
                     </div>
                 </div>
             </div>
@@ -98,20 +96,10 @@
                 <div
                     class="absolute inset-0 bg-gradient-to-tr from-purple-600 to-fuchsia-600 rounded-[2rem] rotate-3 scale-105 opacity-20 group-hover:rotate-6 transition-transform duration-500">
                 </div>
-<<<<<<< HEAD
-                @if($yayasan && $yayasan->foto_kepala_yayasan)
                     <img src="{{ asset('storage/' . $yayasan->foto_kepala_yayasan) }}"
-                        alt="Kepala Sekolah"
-                        class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] transition-all duration-700">
-                @else
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                        alt="Kepala Sekolah"
-                        class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700">
-                @endif
-=======
-                <img src="{{ asset('assets/img/foto pimpinan.jpg') }}" alt="Pimpinan Pondok Pesantren Aisyah Samawa"
-                    class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700">
->>>>>>> c3b48e9cbc1346cbd8068de572c7d16d6cf8d096
+                        alt="Pimpinan Pondok Pesantren Aisyah Samawa"
+                        class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700"
+                        style="object-position: center 30%;">
             </div>
         </div>
     </section>

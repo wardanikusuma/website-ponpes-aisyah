@@ -49,8 +49,8 @@
                         <div class="p-12 h-full flex flex-col items-center relative z-10">
                             <div
                                 class="w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-[2rem] flex items-center justify-center text-5xl shadow-2xl mb-8 transform group-hover:rotate-6 transition-transform duration-500 overflow-hidden">
-                                @if($p->gambar)
-                                    <img src="{{ asset('storage/' . $p->gambar) }}" class="w-full h-full object-cover">
+                                @if($p->foto)
+                                    <img src="{{ asset('storage/' . $p->foto) }}" class="w-full h-full object-cover">
                                 @else
                                     🏆
                                 @endif
