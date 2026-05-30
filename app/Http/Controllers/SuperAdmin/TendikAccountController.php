@@ -22,7 +22,7 @@ class TendikAccountController extends Controller
             'email' => 'required|email|unique:tendik,email',
             'password' => 'required|min:6',
             'jenjang' => 'required|in:PAUD,SD,SMP,SMA',
-            'nuptk' => 'nullable|string|max:30',
+            'nip' => 'nullable|string|max:30',
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
@@ -30,6 +30,29 @@ class TendikAccountController extends Controller
         Tendik::create($validated);
 
         return back()->with('success', 'Akun Tendik berhasil dibuat.');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $tendik = Tendik::findOrFail($id);
+
+        $validated = $request->validate([
+            'nama' => 'required|string|max:100',
+            'email' => 'required|email|unique:tendik,email,' . $id,
+            'password' => 'nullable|min:6',
+            'jenjang' => 'required|in:PAUD,SD,SMP,SMA',
+            'nip' => 'nullable|string|max:30',
+        ]);
+
+        if (!empty($validated['password'])) {
+            $validated['password'] = Hash::make($validated['password']);
+        } else {
+            unset($validated['password']);
+        }
+
+        $tendik->update($validated);
+
+        return back()->with('success', 'Akun Tendik berhasil diperbarui.');
     }
 
     public function destroy($id)

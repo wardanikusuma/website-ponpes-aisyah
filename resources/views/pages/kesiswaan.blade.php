@@ -91,6 +91,8 @@
                         </div>
                         <h4 class="font-bold text-slate-700 uppercase text-[11px] tracking-widest group-hover:text-purple-700 transition-colors">
                             {{ $e->nama_eskul }}</h4>
+                        <p class="font-bold text-slate-700 uppercase text-[11px] tracking-widest group-hover:text-purple-700 transition-colors">
+                            {{ $e->deskripsi }}</p>
                     </div>
                 @empty
                     <div class="col-span-4 text-center py-10 text-slate-400 italic">Belum ada data ekstrakurikuler.</div>

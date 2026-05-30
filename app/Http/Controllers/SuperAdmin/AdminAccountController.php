@@ -35,6 +35,29 @@ class AdminAccountController extends Controller
         return back()->with('success', 'Akun admin berhasil dibuat.');
     }
 
+    public function update(Request $request, $id)
+    {
+        $admin = Admin::findOrFail($id);
+
+        $validated = $request->validate([
+            'nama' => 'required|string|max:100',
+            'email' => 'required|email|unique:admin,email,' . $id,
+            'password' => 'nullable|min:6',
+            'jenjang' => 'required|in:PAUD,SD,SMP,SMA',
+            'nip' => 'nullable|string|max:30',
+        ]);
+
+        if (!empty($validated['password'])) {
+            $validated['password'] = \Illuminate\Support\Facades\Hash::make($validated['password']);
+        } else {
+            unset($validated['password']);
+        }
+
+        $admin->update($validated);
+
+        return back()->with('success', 'Akun admin berhasil diperbarui.');
+    }
+
     public function destroy($id)
     {
         Admin::destroy($id);
