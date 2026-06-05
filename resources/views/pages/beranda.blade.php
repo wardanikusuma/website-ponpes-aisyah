@@ -1,3 +1,4 @@
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @extends('layouts.app')
 
 @section('title', 'Beranda')
@@ -216,139 +217,123 @@
                 <div class="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <style>
-                .flip-card {
-                    perspective: 1000px;
-                }
+            {{-- Grid Container --}}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
-                .flip-card-inner {
-                    position: relative;
-                    width: 100%;
-                    height: 380px;
-                    transform-style: preserve-3d;
-                    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-
-                .flip-card:hover .flip-card-inner,
-                .flip-card.active .flip-card-inner {
-                    transform: rotateY(180deg);
-                }
-
-                .flip-card-front,
-                .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    backface-visibility: hidden;
-                    -webkit-backface-visibility: hidden;
-                    border-radius: 2.5rem;
-                    overflow: hidden;
-                }
-
-                .flip-card-back {
-                    transform: rotateY(180deg);
-                }
-            </style>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {{-- Program 1: Tahfidz --}}
-                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flip-card-inner shadow-xl">
-                        {{-- DEPAN --}}
-                        <div
-                            class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
-                            <div
-                                class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
-                                📖
-                            </div>
-                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
-                                Tahfidz Qur'an<br><span class="text-purple-700">30 Juz</span>
-                            </h4>
-                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                {{-- Menggunakan Alpine.js untuk kontrol state 'open' --}}
+                <div x-data="{ open: false }" @click="open = !open"
+                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
+                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+
+                    {{-- Container Icon & Judul (Kondisi Awal) --}}
+                    <div class="transition-all duration-500 flex flex-col items-center"
+                        :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
+
+                        {{-- Icon / Logo --}}
+                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
+                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
+                            📖
                         </div>
-                        {{-- BELAKANG --}}
-                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12"
-                            style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
-                            <div
-                                class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">
-                                📖</div>
-                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
-                                Tahfidz Qur'an <span class="text-fuchsia-300">30 Juz</span>
-                            </h4>
-                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
-                                Program unggulan hafalan Al-Qur'an 30 juz dengan metode talaqqi yang terbimbing, mutqin, dan
-                                terstruktur bersama para hafizah berpengalaman.
-                            </p>
-                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
-                        </div>
+
+                        {{-- Judul --}}
+                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
+                            :class="open ? 'text-xl' : 'text-2xl'">
+                            Tahfidz Qur'an<br><span class="text-purple-700">30 Juz</span>
+                        </h4>
                     </div>
+
+                    {{-- Deskripsi (Awalnya tersembunyi) --}}
+                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
+                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
+                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                        <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
+                            Program unggulan hafalan Al-Qur'an 30 Juz dengan metode talaqqi yang terbimbing, mutqin, dan
+                            terstruktur bersama para hafizah berpengalaman.
+                        </p>
+                    </div>
+
+                    {{-- Indikator Garis Bawah --}}
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8 transition-all duration-300"
+                        :class="open ? 'opacity-100' : 'opacity-100'"></div>
                 </div>
 
                 {{-- Program 2: Bilingual --}}
-                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flip-card-inner shadow-xl">
-                        {{-- DEPAN --}}
-                        <div
-                            class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
-                            <div
-                                class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
-                                🌍
-                            </div>
-                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
-                                Bilingual<br><span class="text-purple-700">(Arab & Inggris)</span>
-                            </h4>
-                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                <div x-data="{ open: false }" @click="open = !open"
+                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
+                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+
+                    {{-- Container Icon & Judul --}}
+                    <div class="transition-all duration-500 flex flex-col items-center"
+                        :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
+                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
+                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
+                            🌍
                         </div>
-                        {{-- BELAKANG --}}
-                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12"
-                            style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
-                            <div
-                                class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">
-                                🌍</div>
-                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
-                                Bilingual <span class="text-fuchsia-300">(Arab & Inggris)</span>
-                            </h4>
-                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
-                                Pembelajaran intensif dua bahasa internasional — Arab dan Inggris — sebagai bekal komunikasi
-                                global yang berlandaskan nilai islami.
-                            </p>
-                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
-                        </div>
+                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
+                            :class="open ? 'text-xl' : 'text-2xl'">
+                            Bilingual<br><span class="text-purple-700">(Arab & Inggris)</span>
+                        </h4>
                     </div>
+
+                    {{-- Deskripsi --}}
+                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
+                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
+                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                        <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
+                            Pembelajaran intensif dua bahasa internasional — Arab dan Inggris — sebagai bekal komunikasi
+                            global yang berlandaskan nilai islami.
+                        </p>
+                    </div>
+
+                    {{-- Indikator Garis Bawah --}}
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8"></div>
                 </div>
 
                 {{-- Program 3: Kitab Kuning --}}
-                <div class="flip-card cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="flip-card-inner shadow-xl">
-                        {{-- DEPAN --}}
-                        <div
-                            class="flip-card-front bg-white border border-slate-100 flex flex-col items-center justify-center text-center p-12">
-                            <div
-                                class="w-24 h-24 bg-purple-100 rounded-[1.8rem] flex items-center justify-center text-5xl mb-8 shadow-md">
-                                📚
-                            </div>
-                            <h4 class="text-2xl font-black text-gray-900 leading-tight">
-                                Kajian<br><span class="text-purple-700">Kitab Kuning</span>
-                            </h4>
-                            <div class="mt-8 w-10 h-1 bg-purple-200 rounded-full"></div>
+                <div x-data="{ open: false }" @click="open = !open"
+                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
+                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+
+                    {{-- Container Icon & Judul --}}
+                    <div class="transition-all duration-500 flex flex-col items-center"
+                        :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
+                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
+                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
+                            📚
                         </div>
-                        {{-- BELAKANG --}}
-                        <div class="flip-card-back flex flex-col items-center justify-center text-center p-12"
-                            style="background: linear-gradient(135deg, #581c87, #7e22ce, #a21caf);">
-                            <div
-                                class="w-16 h-16 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center text-3xl mb-6">
-                                📚</div>
-                            <h4 class="text-xl font-black text-white uppercase tracking-tight mb-5 leading-tight">
-                                Kajian <span class="text-fuchsia-300">Kitab Kuning</span>
-                            </h4>
-                            <p class="text-purple-100 font-medium leading-relaxed text-sm">
-                                Pengkajian mendalam kitab-kitab klasik ulama salaf sebagai fondasi pemahaman agama yang
-                                kokoh sesuai manhaj Ahlus Sunnah Wal Jamah.
-                            </p>
-                            <div class="mt-6 w-10 h-1 bg-fuchsia-400/60 rounded-full"></div>
-                        </div>
+                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
+                            :class="open ? 'text-xl' : 'text-2xl'">
+                            Kajian<br><span class="text-purple-700">Kitab Kuning</span>
+                        </h4>
                     </div>
+
+                    {{-- Deskripsi --}}
+                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
+                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
+                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                        <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
+                            Pengkajian mendalam kitab-kitab klasik ulama salaf sebagai fondasi pemahaman agama yang kokoh
+                            sesuai manhaj Ahlus Sunnah Wal Jama'ah.
+                        </p>
+                    </div>
+
+                    {{-- Indikator Garis Bawah --}}
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8"></div>
                 </div>
+
             </div>
         </div>
     </section>
