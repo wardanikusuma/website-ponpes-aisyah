@@ -60,56 +60,60 @@
                 <div class="w-12 h-1 bg-purple-200 mx-auto rounded-full"></div>
             </div>
 
-            <div class="space-y-8">
-                @php
-                    // Sudah ditambahkan key 'link' di setiap media informasi
-                    // Ganti teks di dalam kutip tunggal sesuai link sosial media resmi ponpes nanti
-                    $layanan = [
-                        [
-                            't' => 'WhatsApp Center',
-                            'd' => 'Hubungi admin untuk tanya jawab cepat.',
-                            'i' => '💬',
-                            'c' => 'from-green-400 to-emerald-600',
-                            'link' => 'https://wa.me/6281234567890',
-                        ],
-                        [
-                            't' => 'Email Academic',
-                            'd' => 'Pertanyaan seputar kurikulum dan pendaftaran.',
-                            'i' => '📧',
-                            'c' => 'from-blue-400 to-indigo-600',
-                            'link' => 'mailto:humas.ponpesaisyahsamawa@gmail.com',
-                        ],
-                        [
-                            't' => 'Instagram Resmi',
-                            'd' => 'Update kegiatan harian santriwati.',
-                            'i' => '📸',
-                            'c' => 'from-fuchsia-500 to-purple-600',
-                            'link' => 'https://instagram.com/smaplusaisyah',
-                        ],
-                        [
-                            't' => 'Facebook Resmi',
-                            'd' => 'Komunitas dan informasi berita terbaru.',
-                            'i' => '👥',
-                            'c' => 'from-blue-600 to-blue-800',
-                            'link' => 'https://www.facebook.com/ponpes.aisyah.samawa',
-                        ],
-                        [
-                            't' => 'Saluran YouTube',
-                            'd' => 'Dokumentasi video acara besar pondok.',
-                            'i' => '🎥',
-                            'c' => 'from-red-500 to-orange-600',
-                            'link' => 'https://youtube.com/@aisyahtv5676',
-                        ],
-                    ];
-                @endphp
+            @php
+                $layanan = [
+                    [
+                        't' => 'WhatsApp',
+                        'd' => 'Hubungi admin untuk tanya jawab cepat.',
+                        'i' => asset('assets/img/WA.svg'),
+                        'c' => 'from-green-400 to-emerald-600',
+                        'link' => 'https://wa.me/6285156660970',
+                    ],
+                    [
+                        't' => 'Email',
+                        'd' => 'Pertanyaan seputar kurikulum dan pendaftaran.',
+                        'i' => asset('assets/img/EMAIL.svg'),
+                        'c' => 'from-white to-indigo-600',
+                        'link' => 'mailto:humas.ponpesaisyahsamawa@gmail.com',
+                    ],
+                    [
+                        't' => 'Instagram',
+                        'd' => 'Update kegiatan harian santriwati.',
+                        'i' => asset('assets/img/IG.svg'),
+                        'c' => 'from-purple-700 via-pink-500 to-yellow-400',
+                        'link' => 'https://instagram.com/smaplusaisyah',
+                    ],
+                    [
+                        't' => 'Facebook',
+                        'd' => 'Komunitas dan informasi berita terbaru.',
+                        'i' => asset('assets/img/FB.svg'),
+                        'c' => 'from-blue-600 to-blue-800',
+                        'link' => 'https://www.facebook.com/ponpes.aisyah.samawa',
+                    ],
+                    [
+                        't' => 'YouTube',
+                        'd' => 'Dokumentasi video acara besar pondok.',
+                        'i' => asset('assets/img/YT.svg'),
+                        'c' => 'from-red-600 to-red-600',
+                        'link' => 'https://youtube.com/@aisyahtv5676',
+                    ],
+                ];
+            @endphp
 
+            <div class="space-y-8">
                 @foreach ($layanan as $l)
                     <div
-                        class="flex flex-col md:flex-row items-center gap-8 p-8 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:border-purple-200 transition-all duration-300 group">
-                        <div
-                            class="w-24 h-24 shrink-0 bg-gradient-to-br {{ $l['c'] }} rounded-full flex items-center justify-center text-4xl shadow-lg group-hover:scale-110 transition-transform duration-500">
-                            {{ $l['i'] }}
-                        </div>
+                        class="flex flex-col md:flex-row items-center gap-12 p-12 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:border-purple-200 transition-all duration-300 group">
+
+                    <div
+                        class="w-24 h-24 shrink-0 bg-gradient-to-br {{ $l['c'] }} rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+
+                        <img src="{{ $l['i'] }}"
+                            alt="{{ $l['t'] }}"
+                            class="w-12 h-12 object-contain">
+
+                    </div>
+
                         <div class="flex-1 text-center md:text-left">
                             <h4 class="text-2xl font-black text-slate-800 uppercase tracking-tight">{{ $l['t'] }}</h4>
                             <p class="text-slate-500 mt-2 font-medium">{{ $l['d'] }}</p>
