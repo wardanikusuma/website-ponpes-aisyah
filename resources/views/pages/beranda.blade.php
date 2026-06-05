@@ -232,8 +232,9 @@
 
                         {{-- Icon / Logo --}}
                         <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
-                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
-                            📖
+                            :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
+                            <img src="{{ asset('images/curanic.svg') }}" alt="Tahfidz"
+                                class="w-[60%] h-[60%] object-contain">
                         </div>
 
                         {{-- Judul --}}
@@ -271,8 +272,9 @@
                     <div class="transition-all duration-500 flex flex-col items-center"
                         :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
                         <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
-                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
-                            🌍
+                            :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
+                            <img src="{{ asset('images/globe.svg') }}" alt="Bilingual"
+                                class="w-[60%] h-[60%] object-contain">
                         </div>
                         <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
                             :class="open ? 'text-xl' : 'text-2xl'">
@@ -307,8 +309,9 @@
                     <div class="transition-all duration-500 flex flex-col items-center"
                         :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
                         <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
-                            :class="open ? 'w-16 h-16 text-3xl mb-4' : 'w-24 h-24 text-5xl mb-8'">
-                            📚
+                            :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
+                            <img src="{{ asset('images/quranic.svg') }}" alt="Kajian Kitab"
+                                class="w-[60%] h-[60%] object-contain">
                         </div>
                         <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
                             :class="open ? 'text-xl' : 'text-2xl'">
