@@ -22,39 +22,42 @@
     </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-purple-950">
 
-    <nav class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-purple-100">
+    {{-- HEADER UTAMA (Warna Ungu Gelap Mewah) --}}
+    <nav class="bg-purple-950/95 backdrop-blur-lg shadow-md sticky top-0 z-50 border-b border-purple-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
 
                 <div class="flex items-center group">
+                    {{-- Wadah logo serasi ungu gelap --}}
                     <div
-                        class="w-16 h-16 rounded-full bg-white shadow-md border-2 border-purple-100 flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
+                        class="w-16 h-16 rounded-full bg-purple-900 shadow-inner border-2 border-purple-700/50 flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
                         <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo Aisyah Samawa"
                             class="w-full h-full object-contain p-1">
                     </div>
                     <div class="flex flex-col">
-                        <span class="text-2xl font-black tracking-tighter text-gray-900 leading-none uppercase">
-                            AISYAH <span class="text-purple-600">SAMAWA</span>
+                        <span class="text-2xl font-black tracking-tighter text-white leading-none uppercase">
+                            AISYAH <span class="text-fuchsia-400">SAMAWA</span>
                         </span>
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mt-1">
+                        <span class="text-[10px] font-bold text-purple-300 uppercase tracking-[0.3em] mt-1">
                             Pondok Pesantren Modern
                         </span>
                     </div>
                 </div>
 
+                {{-- Menu utama tetap putih/ungu muda kontras di atas background gelap --}}
                 <div class="hidden md:flex items-center space-x-8">
 
                     <a href="{{ route('home') }}"
-                        class="text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors">
+                        class="text-purple-200 hover:text-white font-bold text-sm uppercase tracking-widest transition-colors">
                         Beranda
                     </a>
 
-                    {{-- TENTANG --}}
+                    {{-- TENTANG (Dropdown Putih, Tulisan Abu-abu/Hitam) --}}
                     <div class="relative dropdown">
                         <button
-                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                            class="flex items-center text-purple-200 hover:text-white font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Tentang
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -78,10 +81,10 @@
                         </div>
                     </div>
 
-                    {{-- AKADEMIK --}}
+                    {{-- AKADEMIK (Dropdown Putih, Tulisan Abu-abu/Hitam) --}}
                     <div class="relative dropdown">
                         <button
-                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                            class="flex items-center text-purple-200 hover:text-white font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Akademik
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -96,17 +99,15 @@
                             <a href="{{ route('akademik') }}#kurikulum"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Kurikulum</a>
                             <a href="{{ route('akademik') }}#unggulan"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Program
                                 Unggulan</a>
-                            {{-- <a href="{{ route('ppdb.landing') }}"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB Online</a> --}}
                         </div>
                     </div>
 
-                    {{-- KESISWAAN --}}
+                    {{-- KESISWAAN (Dropdown Putih, Tulisan Abu-abu/Hitam) --}}
                     <div class="relative dropdown">
                         <button
-                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                            class="flex items-center text-purple-200 hover:text-white font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Kesiswaan
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -125,10 +126,10 @@
                         </div>
                     </div>
 
-                    {{-- LAINNYA --}}
+                    {{-- LAINNYA (Dropdown Putih, Tulisan Abu-abu/Hitam) --}}
                     <div class="relative dropdown">
                         <button
-                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                            class="flex items-center text-purple-200 hover:text-white font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Lainnya
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -146,13 +147,13 @@
                     </div>
 
                     <a href="{{ route('ppdb.landing') }}"
-                        class="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-tighter shadow-lg shadow-purple-200 hover:shadow-purple-400 transition-all transform hover:-translate-y-1">
+                        class="bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-3 rounded-2xl font-black text-sm uppercase tracking-tighter shadow-lg shadow-purple-950/50 hover:shadow-purple-500/30 transition-all transform hover:-translate-y-1">
                         PPDB ONLINE
                     </a>
                 </div>
 
                 <div class="md:hidden">
-                    <button class="text-purple-600 focus:outline-none">
+                    <button class="text-purple-300 focus:outline-none">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16m-7 6h7" />
@@ -168,12 +169,10 @@
         @yield('content')
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-900 text-white pt-10 pb-6">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-gray-800 pb-8">
 
-                <!-- KOLOM 1: INFO & MAPS -->
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <div
@@ -196,7 +195,6 @@
                     </div>
                 </div>
 
-                <!-- KOLOM 2: NAVIGASI CEPAT -->
                 <div>
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-4">Navigasi Cepat</h5>
                     <ul class="space-y-2 text-sm font-bold">
@@ -218,7 +216,6 @@
                     </ul>
                 </div>
 
-                <!-- KOLOM 3: BANTUAN -->
                 <div>
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-4">Bantuan</h5>
                     <ul class="space-y-2 text-sm text-gray-300 font-bold">
@@ -230,7 +227,6 @@
                     </ul>
                 </div>
 
-                <!-- KOLOM 4: HUBUNGI KAMI -->
                 <div class="space-y-5">
                     <div>
                         <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-4">Hubungi Kami</h5>
