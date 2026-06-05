@@ -29,8 +29,10 @@
             <div class="flex justify-between items-center h-24">
 
                 <div class="flex items-center group">
-                    <div class="w-16 h-16 rounded-full bg-white shadow-md border-2 border-purple-100 flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
-                        <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo Aisyah Samawa" class="w-full h-full object-contain p-1">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white shadow-md border-2 border-purple-100 flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
+                        <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo Aisyah Samawa"
+                            class="w-full h-full object-contain p-1">
                     </div>
                     <div class="flex flex-col">
                         <span class="text-2xl font-black tracking-tighter text-gray-900 leading-none uppercase">
@@ -51,21 +53,26 @@
 
                     {{-- TENTANG --}}
                     <div class="relative dropdown">
-                        <button class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                        <button
+                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Tentang
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                        <div
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
                             <a href="{{ route('tentang') }}#profil"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Profile</a>
                             <a href="{{ route('tentang') }}#visi"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Visi & Misi</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Visi
+                                & Misi</a>
                             <a href="{{ route('tentang') }}#akreditasi"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Akreditasi</a>
                             <a href="{{ route('tentang') }}#struktur"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Struktur Organisasi</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Struktur
+                                Organisasi</a>
                             <a href="{{ route('tentang') }}#fasilitas"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Fasilitas</a>
                         </div>
@@ -73,53 +80,66 @@
 
                     {{-- AKADEMIK --}}
                     <div class="relative dropdown">
-                        <button class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                        <button
+                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Akademik
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                        <div
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
                             <a href="{{ route('akademik') }}#jenjang"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Jenjang Pendidikan</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Jenjang
+                                Pendidikan</a>
                             <a href="{{ route('akademik') }}#kurikulum"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Kurikulum</a>
                             <a href="{{ route('akademik') }}#unggulan"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program Unggulan</a>
-                            <a href="{{ route('ppdb.landing') }}"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB Online</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Program
+                                Unggulan</a>
+                            {{-- <a href="{{ route('ppdb.landing') }}"
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">PPDB Online</a> --}}
                         </div>
                     </div>
 
                     {{-- KESISWAAN --}}
                     <div class="relative dropdown">
-                        <button class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                        <button
+                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Kesiswaan
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                        <div
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
                             <a href="{{ route('kesiswaan.prestasi') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Prestasi</a>
                             <a href="{{ route('kesiswaan.ekskul') }}"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Ekstrakurikuler</a>
                             <a href="{{ route('kesiswaan.berita') }}"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Berita & Kegiatan</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Berita
+                                & Kegiatan</a>
                         </div>
                     </div>
 
                     {{-- LAINNYA --}}
                     <div class="relative dropdown">
-                        <button class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
+                        <button
+                            class="flex items-center text-gray-500 hover:text-purple-700 font-bold text-sm uppercase tracking-widest transition-colors focus:outline-none py-8">
                             Lainnya
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
+                        <div
+                            class="dropdown-menu hidden absolute left-0 w-56 bg-white border border-purple-100 rounded-2xl shadow-xl z-50 overflow-hidden">
                             <a href="{{ route('lainnya') }}#layanan"
-                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Layanan Informasi</a>
+                                class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition border-b border-gray-50">Layanan
+                                Informasi</a>
                             <a href="{{ route('lainnya') }}#kemitraan"
                                 class="block px-6 py-4 text-xs font-bold text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition">Kemitraan</a>
                         </div>
@@ -134,7 +154,8 @@
                 <div class="md:hidden">
                     <button class="text-purple-600 focus:outline-none">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
@@ -155,10 +176,13 @@
                 <!-- KOLOM 1: INFO & MAPS -->
                 <div class="space-y-4">
                     <div class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden mr-3">
-                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo" class="w-full h-full object-contain p-1">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden mr-3">
+                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo"
+                                class="w-full h-full object-contain p-1">
                         </div>
-                        <h4 class="text-base font-black leading-tight uppercase tracking-tighter">AISYAH <span class="text-purple-500">SAMAWA</span></h4>
+                        <h4 class="text-base font-black leading-tight uppercase tracking-tighter">AISYAH <span
+                                class="text-purple-500">SAMAWA</span></h4>
                     </div>
                     <p class="text-gray-400 text-xs leading-relaxed">
                         Jl. Pramuka RT/RW 002/001 Kel. Brang Biji, Kec. Sumbawa. NTB, Indonesia
@@ -176,11 +200,21 @@
                 <div>
                     <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-4">Navigasi Cepat</h5>
                     <ul class="space-y-2 text-sm font-bold">
-                        <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Beranda</a></li>
-                        <li><a href="{{ route('tentang') }}" class="{{ request()->routeIs('tentang') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Tentang</a></li>
-                        <li><a href="{{ route('akademik') }}" class="{{ request()->routeIs('akademik') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Akademik</a></li>
-                        <li><a href="{{ route('kesiswaan.prestasi') }}" class="{{ request()->routeIs('kesiswaan.*') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Kesiswaan</a></li>
-                        <li><a href="{{ route('lainnya') }}" class="{{ request()->routeIs('lainnya') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Lainnya</a></li>
+                        <li><a href="{{ route('home') }}"
+                                class="{{ request()->routeIs('home') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Beranda</a>
+                        </li>
+                        <li><a href="{{ route('tentang') }}"
+                                class="{{ request()->routeIs('tentang') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Tentang</a>
+                        </li>
+                        <li><a href="{{ route('akademik') }}"
+                                class="{{ request()->routeIs('akademik') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Akademik</a>
+                        </li>
+                        <li><a href="{{ route('kesiswaan.prestasi') }}"
+                                class="{{ request()->routeIs('kesiswaan.*') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Kesiswaan</a>
+                        </li>
+                        <li><a href="{{ route('lainnya') }}"
+                                class="{{ request()->routeIs('lainnya') ? 'text-purple-500' : 'text-gray-300' }} hover:text-purple-400 transition">Lainnya</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -219,19 +253,23 @@
                     <div>
                         <h5 class="font-bold uppercase tracking-widest text-[10px] text-gray-500 mb-3">Ikuti Kami</h5>
                         <div class="flex gap-2">
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition">
+                            <a href="#"
+                                class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition">
                                 <img src="{{ asset('assets/img/FB.svg') }}" alt="Facebook" class="w-4 h-4">
                             </a>
 
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition">
+                            <a href="#"
+                                class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition">
                                 <img src="{{ asset('assets/img/IG.svg') }}" alt="Instagram" class="w-4 h-4">
                             </a>
 
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition">
+                            <a href="#"
+                                class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition">
                                 <img src="{{ asset('assets/img/YT.svg') }}" alt="YouTube" class="w-4 h-4">
                             </a>
 
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">
+                            <a href="#"
+                                class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">
                                 <img src="{{ asset('assets/img/WA.svg') }}" alt="WhatsApp" class="w-4 h-4">
                             </a>
                         </div>

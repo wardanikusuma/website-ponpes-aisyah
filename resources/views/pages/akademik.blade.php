@@ -6,25 +6,29 @@
     {{-- HERO SECTION (sama kayak Beranda) --}}
     <section class="relative min-h-screen flex items-center pt-20 bg-purple-900">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50" alt="Kegiatan Akademik">
+            <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50"
+                alt="Kegiatan Akademik">
             <div class="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-transparent"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-20 w-full">
             <div class="max-w-4xl mx-auto text-center">
-                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-xs font-black tracking-[0.2em] text-fuchsia-300 uppercase bg-fuchsia-500/10 backdrop-blur-md rounded-full border border-fuchsia-500/20">
                     Pendidikan Berkualitas
                 </span>
 
                 <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
                     LAYANAN <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
                         Akademik
                     </span>
                 </h1>
 
                 <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
-                    Kurikulum terpadu yang dirancang untuk melahirkan generasi muslimah yang cerdas secara intelektual dan kokoh secara spiritual.
+                    Kurikulum terpadu yang dirancang untuk melahirkan generasi muslimah yang cerdas secara intelektual dan
+                    kokoh secara spiritual.
                 </p>
 
 
@@ -49,15 +53,17 @@
                         ['title' => 'Diniyah', 'desc' => 'Pendalaman Kitab Kuning', 'color' => 'bg-slate-900'],
                     ];
                 @endphp
-                @foreach($jenjangs as $j)
-                <div class="aspect-video md:aspect-[4/3] rounded-[2.5rem] p-10 flex flex-col justify-center items-center text-center relative overflow-hidden group border border-slate-100 shadow-sm hover:shadow-xl transition-all bg-white">
-                    <div class="absolute top-0 left-0 w-full h-2 {{ $j['color'] }}"></div>
-                    <div class="mb-6 w-16 h-16 rounded-2xl {{ $j['color'] }} flex items-center justify-center text-white font-black text-2xl group-hover:rotate-12 transition-transform shadow-lg">
-                        {{ $j['title'] }}
+                @foreach ($jenjangs as $j)
+                    <div
+                        class="aspect-video md:aspect-[4/3] rounded-[2.5rem] p-10 flex flex-col justify-center items-center text-center relative overflow-hidden group border border-slate-100 shadow-sm hover:shadow-xl transition-all bg-white">
+                        <div class="absolute top-0 left-0 w-full h-2 {{ $j['color'] }}"></div>
+                        <div
+                            class="mb-6 w-16 h-16 rounded-2xl {{ $j['color'] }} flex items-center justify-center text-white font-black text-2xl group-hover:rotate-12 transition-transform shadow-lg">
+                            {{ $j['title'] }}
+                        </div>
+                        <h4 class="text-2xl font-black text-gray-900 mb-3">{{ $j['title'] }}</h4>
+                        <p class="text-gray-500 font-medium leading-relaxed max-w-xs">{{ $j['desc'] }}</p>
                     </div>
-                    <h4 class="text-2xl font-black text-gray-900 mb-3">{{ $j['title'] }}</h4>
-                    <p class="text-gray-500 font-medium leading-relaxed max-w-xs">{{ $j['desc'] }}</p>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -72,14 +78,16 @@
             </div>
             <div class="flex flex-wrap justify-center gap-12 md:gap-24">
                 <div class="group cursor-default">
-                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white border-4 border-purple-500 rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl group-hover:scale-105 transition-transform">
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 bg-white border-4 border-purple-500 rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl group-hover:scale-105 transition-transform">
                         <div class="text-4xl mb-4">📚</div>
                         <h4 class="font-black text-gray-900 uppercase tracking-tighter mb-2">Kurikulum <br> Nasional</h4>
                         <p class="text-xs text-gray-500 font-bold uppercase tracking-widest">Kemendikbudristek</p>
                     </div>
                 </div>
                 <div class="group cursor-default">
-                    <div class="w-64 h-64 md:w-80 md:h-80 bg-slate-900 border-4 border-fuchsia-500 rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl group-hover:scale-105 transition-transform">
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 bg-slate-900 border-4 border-fuchsia-500 rounded-full flex flex-col items-center justify-center text-center p-10 shadow-xl group-hover:scale-105 transition-transform">
                         <div class="text-4xl mb-4">🌙</div>
                         <h4 class="font-black text-white uppercase tracking-tighter mb-2">Kurikulum <br> Pesantren</h4>
                         <p class="text-xs text-fuchsia-400 font-bold uppercase tracking-widest">Kajian Kitab & Adab</p>
@@ -91,39 +99,57 @@
 
     {{-- SECTION: PROGRAM UNGGULAN --}}
     <section id="unggulan" class="py-28 bg-white scroll-mt-24">
-        <div class="max-w-5xl mx-auto px-4">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-20">
-                <h2 class="text-purple-700 font-black tracking-[0.4em] text-sm mb-4 uppercase">Special Programs</h2>
-                <h3 class="text-4xl font-black text-gray-900 uppercase">Program <span class="text-fuchsia-600">Unggulan</span></h3>
+                {{-- <h2 class="text-purple-700 font-black tracking-[0.4em] text-sm mb-4 uppercase">Special Programs</h2> --}}
+                <h3 class="text-4xl font-black text-gray-900 uppercase">Program <span
+                        class="text-fuchsia-600">Unggulan</span></h3>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-3 rounded-full"></div>
             </div>
+
             <div class="space-y-10">
                 @php
                     $programs = [
-                        ['title' => "Tahfidz Qur'an 30 Juz", 'icon' => '📖', 'color' => 'from-purple-500 to-purple-700'],
-                        ['title' => "Bilingual (Arab & Inggris)", 'icon' => '🗣️', 'color' => 'from-fuchsia-500 to-fuchsia-700'],
-                        ['title' => "Kajian Kitab Kuning", 'icon' => '📜', 'color' => 'from-indigo-500 to-indigo-700'],
-                        ['title' => "Entrepreneurship Muslimah", 'icon' => '🛍️', 'color' => 'from-pink-500 to-pink-700'],
-                        ['title' => "Literasi Digital & IT", 'icon' => '💻', 'color' => 'from-slate-800 to-slate-950'],
+                        [
+                            'title' => "Tahfidz Qur'an 30 Juz",
+                            'icon' => '📖',
+                            'color' => 'from-purple-500 to-purple-700',
+                        ],
+                        [
+                            'title' => 'Bilingual (Arab & Inggris)',
+                            'icon' => '🗣️',
+                            'color' => 'from-fuchsia-500 to-fuchsia-700',
+                        ],
+                        ['title' => 'Kajian Kitab Kuning', 'icon' => '📜', 'color' => 'from-indigo-500 to-indigo-700'],
+                        [
+                            'title' => 'Entrepreneurship Muslimah',
+                            'icon' => '🛍️',
+                            'color' => 'from-pink-500 to-pink-700',
+                        ],
+                        ['title' => 'Literasi Digital & IT', 'icon' => '💻', 'color' => 'from-slate-800 to-slate-950'],
                     ];
                 @endphp
-                @foreach($programs as $index => $prog)
-                <div class="flex items-center gap-6 md:gap-10 {{ $index % 2 != 0 ? 'flex-row-reverse' : '' }}">
-                    <div class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br {{ $prog['color'] }} rounded-full shrink-0 flex items-center justify-center text-4xl shadow-lg border-4 border-white">
-                        {{ $prog['icon'] }}
+                @foreach ($programs as $index => $prog)
+                    <div class="flex items-center gap-6 md:gap-10 {{ $index % 2 != 0 ? 'flex-row-reverse' : '' }}">
+                        <div
+                            class="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br {{ $prog['color'] }} rounded-full shrink-0 flex items-center justify-center text-4xl shadow-lg border-4 border-white">
+                            {{ $prog['icon'] }}
+                        </div>
+                        <div
+                            class="flex-1 h-20 md:h-24 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center px-8 shadow-sm group hover:bg-white hover:border-purple-200 transition-all">
+                            <span
+                                class="font-black text-gray-800 uppercase tracking-tighter text-sm md:text-xl {{ $index % 2 != 0 ? 'ml-auto text-right' : '' }}">
+                                {{ $prog['title'] }}
+                            </span>
+                        </div>
                     </div>
-                    <div class="flex-1 h-20 md:h-24 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center px-8 shadow-sm group hover:bg-white hover:border-purple-200 transition-all">
-                        <span class="font-black text-gray-800 uppercase tracking-tighter text-sm md:text-xl {{ $index % 2 != 0 ? 'ml-auto text-right' : '' }}">
-                            {{ $prog['title'] }}
-                        </span>
-                    </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
 
     {{-- SECTION: PPDB --}}
-    <section id="ppdb" class="py-24 bg-white scroll-mt-24">
+    {{-- <section id="ppdb" class="py-24 bg-white scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-gradient-to-br from-indigo-950 to-slate-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
@@ -136,6 +162,6 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 @endsection
