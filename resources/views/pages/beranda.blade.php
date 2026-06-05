@@ -233,8 +233,8 @@
                         {{-- Icon / Logo --}}
                         <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
                             :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
-                            <img src="{{ asset('images/curanic.svg') }}" alt="Tahfidz"
-                                class="w-[60%] h-[60%] object-contain">
+                            <img src="{{ asset('assets/img/quranic.svg') }}" alt="Tahfidz">
+                                <class="w-[60%] h-[60%] object-contain">
                         </div>
 
                         {{-- Judul --}}
