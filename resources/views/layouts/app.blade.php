@@ -202,26 +202,38 @@
                         <h5 class="font-bold uppercase tracking-widest text-xs text-gray-500 mb-4">Hubungi Kami</h5>
                         <ul class="space-y-2 text-sm text-gray-300">
                             <li class="flex items-center gap-2">
-                                <span class="text-purple-500 text-xs">📧</span>
-                                <a href="mailto:contact@aisyahsamawa.ponpes.id" class="hover:text-white text-xs">contact@aisyahsamawa.ponpes.id</a>
+                                <img src="{{ asset('assets/img/EMAIL.svg') }}" alt="Email" class="w-4 h-4">
+                                <a href="mailto:contact@aisyahsamawa.ponpes.id" class="hover:text-white text-xs">
+                                    contact@aisyahsamawa.ponpes.id
+                                </a>
                             </li>
+
                             <li class="flex items-center gap-2">
-                                <span class="text-purple-500 text-xs">💬</span>
-                                <a href="#" class="hover:text-white text-xs">wa.me/6285156660970</a>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-purple-500 text-xs">📞</span>
-                                <span class="text-xs">+6285156660970</span>
+                                <img src="{{ asset('assets/img/HP.svg') }}" alt="Telepon" class="w-4 h-4">
+                                <a href="+6285156660970" class="hover:text-white text-xs">
+                                    +6285156660970
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h5 class="font-bold uppercase tracking-widest text-[10px] text-gray-500 mb-3">Ikuti Kami</h5>
                         <div class="flex gap-2">
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition text-xs font-black">FB</a>
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-sky-500 transition text-xs font-black">TW</a>
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition text-xs font-black">YT</a>
-                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition text-xs font-black">IG</a>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition">
+                                <img src="{{ asset('assets/img/FB.svg') }}" alt="Facebook" class="w-4 h-4">
+                            </a>
+
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition">
+                                <img src="{{ asset('assets/img/IG.svg') }}" alt="Instagram" class="w-4 h-4">
+                            </a>
+
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition">
+                                <img src="{{ asset('assets/img/YT.svg') }}" alt="YouTube" class="w-4 h-4">
+                            </a>
+
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition">
+                                <img src="{{ asset('assets/img/WA.svg') }}" alt="WhatsApp" class="w-4 h-4">
+                            </a>
                         </div>
                     </div>
                 </div>
