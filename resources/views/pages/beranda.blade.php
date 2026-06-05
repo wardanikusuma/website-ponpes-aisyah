@@ -70,24 +70,26 @@
             <div class="order-2 md:order-1 relative">
                 <div class="absolute -top-4 -left-4 w-20 h-20 bg-purple-100 rounded-full -z-10 opacity-50"></div>
                 <h2 class="text-fuchsia-600 font-black text-xs uppercase tracking-[0.3em] mb-4">Sambutan Kepala Sekolah</h2>
-                <h3 class="text-4xl font-black text-gray-900 mb-8 leading-tight">{{ $yayasan->sambutan_kepala_yayasan ?? 'Membangun Karakter Berbasis Moralitas' }}</h3>
+                <h3 class="text-4xl font-black text-gray-900 mb-8 leading-tight">
+                    {{ $yayasan->sambutan_kepala_yayasan ?? 'Membangun Karakter Berbasis Moralitas' }}</h3>
 
                 <div class="space-y-6 text-gray-600 text-lg leading-relaxed font-medium">
                     <p class="border-l-4 border-fuchsia-500 pl-6 italic bg-fuchsia-50/50 py-4 rounded-r-xl text-gray-800">
                         "{{ $yayasan->quotes_kepala_yayasan ?? 'Pendidikan bukan sekadar transfer ilmu, tapi penanaman adab dan keberanian berpikir.' }}"
                     </p>
-                    <p>{{ $yayasan->deskripsi_kepala_yayasan ?? 'Di Aisyah Samawa, kami memastikan setiap santriwati mendapatkan perhatian personal untuk mengembangkan potensi uniknya dalam lingkungan yang mendukung.' }}</p>
+                    <p>{{ $yayasan->deskripsi_kepala_yayasan ?? 'Di Aisyah Samawa, kami memastikan setiap santriwati mendapatkan perhatian personal untuk mengembangkan potensi uniknya dalam lingkungan yang mendukung.' }}
+                    </p>
                 </div>
 
                 <div class="mt-10 flex items-center gap-4">
                     <div class="w-16 h-1 bg-gradient-to-r from-fuchsia-600 to-transparent"></div>
                     <div>
-                    <p class="font-black text-gray-900 text-xl tracking-tight">
-                        {{ $yayasan->nama_kepala_yayasan ?? 'Dr. Munajat Lc. M.Hi' }}
-                    </p>
-                    <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">
-                        Pimpinan Pondok Pesantren
-                    </p>
+                        <p class="font-black text-gray-900 text-xl tracking-tight">
+                            {{ $yayasan->nama_kepala_yayasan ?? 'Dr. Munajat Lc. M.Hi' }}
+                        </p>
+                        <p class="text-fuchsia-600 font-bold text-sm uppercase tracking-widest">
+                            Pimpinan Pondok Pesantren
+                        </p>
                     </div>
                 </div>
             </div>
@@ -96,10 +98,16 @@
                 <div
                     class="absolute inset-0 bg-gradient-to-tr from-purple-600 to-fuchsia-600 rounded-[2rem] rotate-3 scale-105 opacity-20 group-hover:rotate-6 transition-transform duration-500">
                 </div>
+                @if ($yayasan && $yayasan->foto_kepala_yayasan)
                     <img src="{{ asset('storage/' . $yayasan->foto_kepala_yayasan) }}"
                         alt="Pimpinan Pondok Pesantren Aisyah Samawa"
                         class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700"
                         style="object-position: center 30%;">
+                @else
+                    <img src="{{ asset('images/default-avatar.jpg') }}" alt="Pimpinan Pondok Pesantren Aisyah Samawa"
+                        class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700"
+                        style="object-position: center 30%;">
+                @endif
             </div>
         </div>
     </section>
@@ -364,33 +372,33 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 @forelse($berita as $b)
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
-                        @if($b->foto)
-                            <img src="{{ asset('storage/' . $b->foto) }}"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
-                                alt="{{ $b->judul }}">
-                        @else
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
-                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
-                                alt="Berita">
-                        @endif
-                        <div class="absolute bottom-6 left-6">
-                            <span
-                                class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">
-                                {{ $b->kategori ?? 'Kegiatan' }}
-                            </span>
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
+                            @if ($b->foto)
+                                <img src="{{ asset('storage/' . $b->foto) }}"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                    alt="{{ $b->judul }}">
+                            @else
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                    alt="Berita">
+                            @endif
+                            <div class="absolute bottom-6 left-6">
+                                <span
+                                    class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">
+                                    {{ $b->kategori ?? 'Kegiatan' }}
+                                </span>
+                            </div>
                         </div>
+                        <h3
+                            class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
+                            {{ $b->judul }}
+                        </h3>
                     </div>
-                    <h3
-                        class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
-                        {{ $b->judul }}
-                    </h3>
-                </div>
                 @empty
-                <div class="col-span-3 text-center py-10 text-gray-400 italic">
-                    Belum ada berita terbaru.
-                </div>
+                    <div class="col-span-3 text-center py-10 text-gray-400 italic">
+                        Belum ada berita terbaru.
+                    </div>
                 @endforelse
             </div>
         </div>
