@@ -229,7 +229,7 @@
                         class="flex flex-col items-center transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0 [.expanded_&]:translate-y-0">
                         {{-- Container Icon --}}
                         <div
-                            class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
+                            class="bg-purple-900 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
                             <img src="{{ asset('assets/img/quranic.svg') }}" alt="Tahfidz"
                                 class="w-[60%] h-[60%] object-contain">
                         </div>
@@ -260,7 +260,7 @@
                         class="flex flex-col items-center transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0 [.expanded_&]:translate-y-0">
                         {{-- Container Icon --}}
                         <div
-                            class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
+                            class="bg-purple-900 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
                             <img src="{{ asset('assets/img/globe.svg') }}" alt="Bilingual"
                                 class="w-[60%] h-[60%] object-contain">
                         </div>
@@ -291,7 +291,7 @@
                         class="flex flex-col items-center transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0 [.expanded_&]:translate-y-0">
                         {{-- Container Icon --}}
                         <div
-                            class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
+                            class="bg-purple-900 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
                             <img src="{{ asset('assets/img/masjid.svg') }}" alt="Kajian Kitab"
                                 class="w-[60%] h-[60%] object-contain">
                         </div>
