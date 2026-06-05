@@ -221,10 +221,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
                 {{-- Program 1: Tahfidz --}}
-                {{-- Menggunakan Alpine.js untuk kontrol state 'open' --}}
-                <div x-data="{ open: false }" @click="open = !open"
-                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
-                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+                <div class="group bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer flex flex-col items-center justify-center text-center overflow-hidden h-[380px] hover:h-[500px] transition-all duration-500 ease-in-out"
+                    onclick="this.classList.toggle('expanded')">
 
                     {{-- Container Icon & Judul (Kondisi Awal) --}}
                     <div class="transition-all duration-500 flex flex-col items-center"
@@ -236,105 +234,84 @@
                             <img src="{{ asset('assets/img/quranic.svg') }}" alt="Tahfidz">
                                 <class="w-[60%] h-[60%] object-contain">
                         </div>
-
                         {{-- Judul --}}
-                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
-                            :class="open ? 'text-xl' : 'text-2xl'">
+                        <h4
+                            class="font-black text-gray-900 leading-tight transition-all duration-500 ease-in-out text-2xl group-hover:text-xl [.expanded_&]:text-xl">
                             Tahfidz Qur'an<br><span class="text-purple-700">30 Juz</span>
                         </h4>
                     </div>
 
-                    {{-- Deskripsi (Awalnya tersembunyi) --}}
-                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
-                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
-                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                    {{-- Deskripsi (Awalnya Tersembunyi, Muncul Pas Hover/Klik) --}}
+                    <div
+                        class="w-full opacity-0 max-h-0 pointer-events-none group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-6 group-hover:pointer-events-auto [.expanded_&]:opacity-100 [.expanded_&]:max-h-[200px] [.expanded_&]:mt-6 [.expanded_&]:pointer-events-auto transition-all duration-500 ease-in-out">
                         <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
                             Program unggulan hafalan Al-Qur'an 30 Juz dengan metode talaqqi yang terbimbing, mutqin, dan
                             terstruktur bersama para hafizah berpengalaman.
                         </p>
                     </div>
-
-                    {{-- Indikator Garis Bawah --}}
-                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8 transition-all duration-300"
-                        :class="open ? 'opacity-100' : 'opacity-100'"></div>
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-auto"></div>
                 </div>
 
                 {{-- Program 2: Bilingual --}}
-                <div x-data="{ open: false }" @click="open = !open"
-                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
-                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+                <div class="group bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer flex flex-col items-center justify-center text-center overflow-hidden h-[380px] hover:h-[500px] transition-all duration-500 ease-in-out"
+                    onclick="this.classList.toggle('expanded')">
 
                     {{-- Container Icon & Judul --}}
-                    <div class="transition-all duration-500 flex flex-col items-center"
-                        :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
-                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
-                            :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
-                            <img src="{{ asset('images/globe.svg') }}" alt="Bilingual"
+                    <div
+                        class="flex flex-col items-center transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0 [.expanded_&]:translate-y-0">
+                        {{-- Container Icon --}}
+                        <div
+                            class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
+                            <img src="{{ asset('assets/img/globe.svg') }}" alt="Bilingual"
                                 class="w-[60%] h-[60%] object-contain">
                         </div>
-                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
-                            :class="open ? 'text-xl' : 'text-2xl'">
+                        {{-- Judul --}}
+                        <h4
+                            class="font-black text-gray-900 leading-tight transition-all duration-500 ease-in-out text-2xl group-hover:text-xl [.expanded_&]:text-xl">
                             Bilingual<br><span class="text-purple-700">(Arab & Inggris)</span>
                         </h4>
                     </div>
 
                     {{-- Deskripsi --}}
-                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
-                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
-                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                    <div
+                        class="w-full opacity-0 max-h-0 pointer-events-none group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-6 group-hover:pointer-events-auto [.expanded_&]:opacity-100 [.expanded_&]:max-h-[200px] [.expanded_&]:mt-6 [.expanded_&]:pointer-events-auto transition-all duration-500 ease-in-out">
                         <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
                             Pembelajaran intensif dua bahasa internasional — Arab dan Inggris — sebagai bekal komunikasi
                             global yang berlandaskan nilai islami.
                         </p>
                     </div>
-
-                    {{-- Indikator Garis Bawah --}}
-                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8"></div>
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-auto"></div>
                 </div>
 
                 {{-- Program 3: Kitab Kuning --}}
-                <div x-data="{ open: false }" @click="open = !open"
-                    class="bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer transition-all duration-500 flex flex-col items-center justify-center text-center overflow-hidden"
-                    :class="open ? 'max-h-[600px] ring-2 ring-fuchsia-500' : 'max-h-[380px] hover:shadow-2xl hover:scale-[1.02]'">
+                <div class="group bg-white border border-purple-200 shadow-xl rounded-[2.5rem] p-12 cursor-pointer flex flex-col items-center justify-center text-center overflow-hidden h-[380px] hover:h-[500px] transition-all duration-500 ease-in-out"
+                    onclick="this.classList.toggle('expanded')">
 
                     {{-- Container Icon & Judul --}}
-                    <div class="transition-all duration-500 flex flex-col items-center"
-                        :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
-                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
-                            :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
-                            <img src="{{ asset('images/quranic.svg') }}" alt="Kajian Kitab"
+                    <div
+                        class="flex flex-col items-center transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0 [.expanded_&]:translate-y-0">
+                        {{-- Container Icon --}}
+                        <div
+                            class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4">
+                            <img src="{{ asset('assets/img/masjid.svg') }}" alt="Kajian Kitab"
                                 class="w-[60%] h-[60%] object-contain">
                         </div>
-                        <h4 class="font-black text-gray-900 leading-tight transition-all duration-500"
-                            :class="open ? 'text-xl' : 'text-2xl'">
+                        {{-- Judul --}}
+                        <h4
+                            class="font-black text-gray-900 leading-tight transition-all duration-500 ease-in-out text-2xl group-hover:text-xl [.expanded_&]:text-xl">
                             Kajian<br><span class="text-purple-700">Kitab Kuning</span>
                         </h4>
                     </div>
 
                     {{-- Deskripsi --}}
-                    <div class="w-full transition-all duration-500 ease-in-out overflow-hidden" x-show="open"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 max-h-0 mt-0"
-                        x-transition:enter-end="opacity-100 max-h-40 mt-5"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 max-h-40 mt-5"
-                        x-transition:leave-end="opacity-0 max-h-0 mt-0">
+                    <div
+                        class="w-full opacity-0 max-h-0 pointer-events-none group-hover:opacity-100 group-hover:max-h-[200px] group-hover:mt-6 group-hover:pointer-events-auto [.expanded_&]:opacity-100 [.expanded_&]:max-h-[200px] [.expanded_&]:mt-6 [.expanded_&]:pointer-events-auto transition-all duration-500 ease-in-out">
                         <p class="text-gray-600 font-medium leading-relaxed text-sm px-2">
                             Pengkajian mendalam kitab-kitab klasik ulama salaf sebagai fondasi pemahaman agama yang kokoh
                             sesuai manhaj Ahlus Sunnah Wal Jama'ah.
                         </p>
                     </div>
-
-                    {{-- Indikator Garis Bawah --}}
-                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-8"></div>
+                    <div class="w-10 h-1 bg-purple-600 rounded-full mt-auto"></div>
                 </div>
 
             </div>
