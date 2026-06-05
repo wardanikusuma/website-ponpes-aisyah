@@ -6,10 +6,44 @@
 @section('content')
     <section class="relative min-h-screen flex items-center pt-20 bg-purple-900">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/img/bangunan.jpeg') }}" class="w-full h-full object-cover object-center brightness-50"
+            {{-- Di sini kita tambahkan id="hero-bg" dan class transisi agar pergantian foto halus --}}
+            <img id="hero-bg" src="{{ asset('assets/img/bangunan.jpeg') }}"
+                class="w-full h-full object-cover object-center brightness-50 transition-all duration-1000 ease-in-out"
                 alt="Gedung Aisyah Samawa">
             <div class="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-transparent"></div>
         </div>
+
+        {{-- LOGIKA JAVASCRIPT SLIDESHOW BACKROUND (DITAMBAHKAN DI SINI) --}}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Daftar foto yang akan diputar ganti-ganti
+                // Kamu bisa tambah foto sesukamu di dalam array ini, pastikan filenya ada di folder public/assets/img/
+                const images = [
+                    "{{ asset('assets/img/bangunan.jpeg') }}",
+                    "{{ asset('assets/img/kegiatan.jpeg') }}",
+                    "{{ asset('assets/img/bg4.jpg') }}",
+                    "{{ asset('assets/img/bg2.jpeg') }}"
+                ];
+
+                let currentIndex = 0;
+                const heroBg = document.getElementById("hero-bg");
+
+                function changeBackground() {
+                    heroBg.style.opacity = "0.3"; // Efek transisi menggelap sesaat
+
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        heroBg.src = images[currentIndex];
+                        heroBg.style.opacity = "1"; // Kembali terang setelah gambar berganti
+                    }, 500);
+                }
+
+                // Gambar otomatis berganti setiap 5000 milidetik (5 detik)
+                if (images.length > 1) {
+                    setInterval(changeBackground, 5000);
+                }
+            });
+        </script>
 
         <div class="max-w-7xl mx-auto px-6 relative z-20 w-full">
             <div class="max-w-4xl text-left">
