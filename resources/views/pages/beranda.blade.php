@@ -15,7 +15,7 @@
             <div class="max-w-4xl text-left">
 
 
-                <h1 class="text-4xl md:text-7xl font-black text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
+                <h1 class="text-4xl md:text-7xl font-black  text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
                     Membentuk Generasi yang <br>
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
@@ -229,10 +229,10 @@
                         :class="open ? 'translate-y-0 scale-90' : 'translate-y-8'">
 
                         {{-- Icon / Logo --}}
-                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500"
+                        <div class="bg-purple-100 rounded-[1.8rem] flex items-center justify-center shadow-md transition-all duration-500 ease-in-out w-24 h-24 mb-8 group-hover:w-16 group-hover:h-16 group-hover:mb-4 [.expanded_&]:w-16 [.expanded_&]:h-16 [.expanded_&]:mb-4"
                             :class="open ? 'w-16 h-16 mb-4' : 'w-24 h-24 mb-8'">
-                            <img src="{{ asset('assets/img/quranic.svg') }}" alt="Tahfidz">
-                                <class="w-[60%] h-[60%] object-contain">
+                            <img src="{{ asset('assets/img/quranic.svg') }}" alt="Tahfidz"
+                                class="w-[60%] h-[60%] object-contain">
                         </div>
                         {{-- Judul --}}
                         <h4
