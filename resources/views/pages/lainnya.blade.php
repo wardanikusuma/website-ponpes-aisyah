@@ -33,8 +33,8 @@
         </div>
     </section>
 
-    <div class="max-w-5xl mx-auto px-6 py-20">
-
+     <div class="max-w-5xl mx-auto px-6 py-20">
+<!--
         {{-- DAFTAR PPDB (CTA BOX) --}}
         <div class="mb-24">
             <a href="#"
@@ -51,7 +51,7 @@
                     </p>
                 </div>
             </a>
-        </div>
+        </div> -->
 
         {{-- LAYANAN INFORMASI --}}
         <div id="layanan" class="mb-32 scroll-mt-24">
@@ -132,7 +132,7 @@
             </div>
         </div>
 
-        {{-- KEMITRAAN / PARTNERSHIP --}}
+        <!-- {{-- KEMITRAAN / PARTNERSHIP --}}
         <div id="kemitraan" class="mt-32 scroll-mt-24">
             <div class="text-center mb-12">
                 <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.5em] mb-4">Kemitraan Strategis</h3>
@@ -169,7 +169,7 @@
                         Proposal →</a>
                 </p>
             </div>
-        </div>
+        </div> -->
 
     </div>
 @endsection

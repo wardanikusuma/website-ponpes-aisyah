@@ -165,96 +165,94 @@
         </div>
     </section>
 
-    {{-- SECTION: VISI & MISI --}}
-    <section class="py-28 bg-slate-50 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4">
+{{-- SECTION: VISI & MISI --}}
+    <section class="py-28 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+        {{-- Dekorasi Latar Belakang Abstrak --}}
+        <div class="absolute top-0 left-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-300/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-20">
                 <h2 class="text-fuchsia-600 font-black tracking-[0.4em] text-sm mb-4 uppercase">Our Vision</h2>
                 <p class="text-4xl md:text-6xl font-black text-gray-900 mb-4 tracking-tighter">
                     SPIRITUALITY, INTELLECTUALITY, <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-fuchsia-600">&
-                        MORALITY</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-fuchsia-600">& MORALITY</span>
                 </p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
                 {{-- Card Header MISI --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-gray-900 text-white flex flex-col justify-center relative overflow-hidden group shadow-2xl">
-                    <div
-                        class="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 blur-3xl group-hover:bg-purple-500/40 transition-colors">
+                <div class="p-10 rounded-[2rem] bg-gray-900 text-white flex flex-col justify-center relative overflow-hidden group shadow-2xl h-full min-h-[250px]">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-fuchsia-600/30 blur-3xl group-hover:bg-fuchsia-500/50 transition-colors duration-700"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-5xl font-black mb-4 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-300">MISI KAMI</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed font-medium">Komitmen konkret kami untuk mencetak muslimah berkualitas yang unggul di dunia dan akhirat.</p>
                     </div>
-                    <h3 class="text-5xl font-black mb-6 tracking-tighter text-fuchsia-400 italic">MISI</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed font-medium">Komitmen konkret kami untuk mencetak
-                        muslimah berkualitas dunia akhirat.</p>
                 </div>
 
                 {{-- Misi 1 --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
-                    <div
-                        class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
-                        1</div>
-                    <p class="text-gray-800 text-lg font-bold leading-relaxed">
-                        Menyelenggarakan sistem pendidikan yang berkualitas dalam frame islami sesuai dengan manhaj
-                        <span class="text-purple-700 font-black underline decoration-purple-200">Ahlus Sunnah Wal
-                            Jamah.</span>
-                    </p>
+                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
+                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">1</div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">01</div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Menyelenggarakan sistem pendidikan yang berkualitas dalam frame islami sesuai dengan manhaj <span class="font-bold text-purple-700">Ahlus Sunnah Wal Jama'ah.</span>
+                        </p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
                 </div>
 
                 {{-- Misi 2 --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-gradient-to-br from-purple-700 to-fuchsia-800 text-white shadow-2xl shadow-purple-200 relative overflow-hidden group">
-                    <div
-                        class="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700">
+                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
+                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">2</div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">02</div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Mengupayakan secara maksimal program <span class="font-bold text-purple-700">Tahfidz Al-Qur'an & Sains</span> sebagai *Brand* keunggulan Pesantren.
+                        </p>
                     </div>
-                    <div
-                        class="w-14 h-14 bg-white/20 backdrop-blur-md text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 border border-white/30">
-                        2</div>
-                    <p class="leading-relaxed text-xl font-black italic">
-                        "Mengupayakan maksimal Tahfidz Al-Qur'an & Sains sebagai Brand Pesantren."
-                    </p>
+                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
                 </div>
 
                 {{-- Misi 3 --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
-                    <div
-                        class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
-                        3</div>
-                    <p class="text-gray-800 text-lg font-bold leading-relaxed">
-                        Menumbuhkan pemahaman yang mendalam tentang dasar perilaku islami serta <span
-                            class="text-purple-700 font-black underline decoration-purple-200">budaya bangsa.</span>
-                    </p>
+                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
+                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">3</div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">03</div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Menumbuhkan pemahaman yang mendalam tentang dasar perilaku islami serta pelestarian <span class="font-bold text-purple-700">budaya bangsa.</span>
+                        </p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
                 </div>
 
                 {{-- Misi 4 --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-xl group">
-                    <div
-                        class="w-14 h-14 bg-gradient-to-br from-purple-600 to-fuchsia-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 shadow-lg shadow-purple-200 group-hover:scale-110 transition-transform">
-                        4</div>
-                    <p class="text-gray-800 text-lg font-bold leading-relaxed">
-                        Melaksanakan pendidikan dan pembelajaran secara efektif dan menyenangkan dengan tetap mengacu pada
-                        <span class="text-purple-700 font-black underline decoration-purple-200">moralitas dan akhlakul
-                            karimah.</span>
-                    </p>
+                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
+                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">4</div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">04</div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Melaksanakan pendidikan dan pembelajaran secara efektif dan menyenangkan dengan mengacu pada <span class="font-bold text-purple-700">moralitas dan akhlakul karimah.</span>
+                        </p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
                 </div>
 
                 {{-- Misi 5 --}}
-                <div
-                    class="p-10 rounded-[2.5rem] bg-gradient-to-br from-purple-700 to-fuchsia-800 text-white shadow-2xl shadow-purple-200 relative overflow-hidden group">
-                    <div
-                        class="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700">
+                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
+                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">5</div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">05</div>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Menyelenggarakan pendidikan yang <span class="font-bold text-purple-700">kreatif, inovatif, dan variatif</span> dalam nuansa lingkungan pondok pesantren yang asri.
+                        </p>
                     </div>
-                    <div
-                        class="w-14 h-14 bg-white/20 backdrop-blur-md text-white rounded-2xl flex items-center justify-center font-black text-2xl mb-8 border border-white/30">
-                        5</div>
-                    <p class="leading-relaxed text-xl font-black italic">
-                        "Menyelenggarakan pendidikan yang kreatif, inovatif, dan variatif dalam nuansa lingkungan pondok
-                        pesantren."
-                    </p>
+                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
                 </div>
+
             </div>
         </div>
     </section>
