@@ -53,41 +53,157 @@
     </section>
 
     {{-- 2. VISI & MISI --}}
-    <section id="visi" class="py-24 bg-slate-50 border-y border-slate-200 scroll-mt-24">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-fuchsia-600 font-black tracking-[0.4em] text-sm mb-6 uppercase">Visi Kami</h2>
-            <div class="p-12 md:p-20 rounded-[3.5rem] bg-gray-900 text-white relative overflow-hidden group shadow-2xl mb-20">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 blur-3xl group-hover:bg-purple-500/20 transition-colors"></div>
-                <p class="text-2xl md:text-4xl font-bold leading-relaxed italic text-gray-100 tracking-tight">
-                    "Menjadi lembaga pendidikan muslimah terkemuka yang melahirkan generasi berakhlak mulia, cerdas intelektual, dan mandiri secara ekonomi."
+    <section id="visi" class="py-24 md:py-28 bg-[#fbf9ff] border-y border-purple-100 scroll-mt-24 relative overflow-hidden">
+        {{-- Ornamen latar lembut --}}
+        <div class="absolute -top-28 -right-20 w-80 h-80 rounded-full bg-fuchsia-200/25 blur-2xl"></div>
+        <div class="absolute -bottom-40 -left-20 w-[32rem] h-72 rounded-[50%] bg-purple-200/30 -rotate-12"></div>
+        <div class="absolute top-48 left-8 w-28 h-28 opacity-25 bg-[radial-gradient(circle,#a855f7_2px,transparent_2px)] bg-[length:16px_16px]"></div>
+        <div class="absolute bottom-36 right-10 w-28 h-28 opacity-20 bg-[radial-gradient(circle,#c026d3_2px,transparent_2px)] bg-[length:16px_16px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            {{-- Visi tetap dipertahankan --}}
+            <div class="max-w-5xl mx-auto mb-24 text-center mission-reveal">
+                <span class="inline-flex px-5 py-2 rounded-full bg-purple-100/80 text-purple-700 text-xs font-black tracking-[0.2em] uppercase mb-5">
+                    Arah dan Tujuan Kami
+                </span>
+                <h2 class="text-4xl md:text-6xl font-black text-[#160735] tracking-tighter mb-8">
+                    VISI <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-500">KAMI</span>
+                </h2>
+                <div class="group relative rounded-[2rem] bg-gradient-to-r from-[#2d0a64] via-purple-800 to-fuchsia-700 p-[1px] shadow-xl shadow-purple-200/70 overflow-hidden">
+                    <div class="relative rounded-[calc(2rem-1px)] bg-white/95 px-8 py-10 md:px-16 md:py-12 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-50/80 via-white to-fuchsia-50/80"></div>
+                        <p class="relative text-xl md:text-3xl font-bold leading-relaxed text-[#2b1455] tracking-tight">
+                            “Menjadi lembaga pendidikan muslimah terkemuka yang melahirkan generasi berakhlak mulia, cerdas intelektual, dan mandiri secara ekonomi.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Judul misi mengikuti komposisi referensi --}}
+            <div class="text-center max-w-3xl mx-auto mb-16 mission-reveal">
+                <span class="inline-flex px-5 py-2 rounded-full bg-fuchsia-100/70 text-purple-700 text-xs font-black tracking-[0.16em] uppercase mb-5">
+                    Mengapa Memilih Kami
+                </span>
+                <h2 class="text-4xl md:text-6xl font-black text-[#160735] tracking-tighter">
+                    MISI <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-500">KAMI</span>
+                </h2>
+                <div class="flex items-center justify-center gap-4 my-5 text-fuchsia-500">
+                    <span class="w-16 h-px bg-gradient-to-r from-transparent to-fuchsia-400"></span>
+                    <span class="text-xl">✿</span>
+                    <span class="w-16 h-px bg-gradient-to-l from-transparent to-fuchsia-400"></span>
+                </div>
+                <p class="text-slate-600 text-base md:text-lg font-medium leading-relaxed">
+                    Komitmen konkret kami untuk mencetak muslimah berkualitas yang unggul di dunia dan akhirat.
                 </p>
             </div>
 
-            <h2 class="text-purple-700 font-black tracking-[0.4em] text-sm mb-12 uppercase">Misi Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center font-black mb-6">01</div>
-                    <p class="text-gray-700 font-bold leading-snug text-left">Menyelenggarakan sistem pendidikan berkualitas dalam frame islami.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                    <div class="w-12 h-12 bg-fuchsia-100 text-fuchsia-600 rounded-xl flex items-center justify-center font-black mb-6">02</div>
-                    <p class="text-gray-700 font-bold leading-snug text-left">Maksimalisasi Tahfidz Al-Qur'an & Sains sebagai Brand Pesantren.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center font-black mb-6">03</div>
-                    <p class="text-gray-700 font-bold leading-snug text-left">Membentuk karakter muslimah yang berintegritas dan disiplin.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center font-black mb-6">04</div>
-                    <p class="text-gray-700 font-bold leading-snug text-left">Mengembangkan potensi kewirausahaan dan kemandirian ekonomi.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
-                    <div class="w-12 h-12 bg-fuchsia-100 text-fuchsia-600 rounded-xl flex items-center justify-center font-black mb-6">05</div>
-                    <p class="text-gray-700 font-bold leading-snug text-left">Mewujudkan lingkungan pendidikan yang aman dan inklusif.</p>
-                </div>
+            @php
+                $missions = [
+                    [
+                        'number' => '01',
+                        'title' => 'Pendidikan Berkualitas',
+                        'description' => "Menyelenggarakan sistem pendidikan yang berkualitas dalam frame islami sesuai dengan manhaj Ahlus Sunnah Wal Jama’ah.",
+                        'icon' => 'book',
+                    ],
+                    [
+                        'number' => '02',
+                        'title' => "Tahfidz Al-Qur’an & Sains",
+                        'description' => "Mengupayakan secara maksimal program Tahfidz Al-Qur’an & Sains sebagai brand keunggulan pesantren.",
+                        'icon' => 'quran',
+                    ],
+                    [
+                        'number' => '03',
+                        'title' => 'Budaya Bangsa',
+                        'description' => 'Menumbuhkan pemahaman yang mendalam tentang dasar perilaku islami serta pelestarian budaya bangsa.',
+                        'icon' => 'people',
+                    ],
+                    [
+                        'number' => '04',
+                        'title' => 'Akhlakul Karimah',
+                        'description' => 'Melaksanakan pendidikan dan pembelajaran secara efektif dan menyenangkan dengan mengacu pada moralitas dan akhlakul karimah.',
+                        'icon' => 'graduate',
+                    ],
+                    [
+                        'number' => '05',
+                        'title' => 'Kreatif, Inovatif & Variatif',
+                        'description' => 'Menyelenggarakan pendidikan yang kreatif, inovatif, dan variatif dalam nuansa lingkungan pondok pesantren yang asri.',
+                        'icon' => 'idea',
+                    ],
+                ];
+            @endphp
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-x-6 gap-y-20 lg:gap-y-16 max-w-6xl mx-auto pt-4">
+                @foreach ($missions as $index => $mission)
+                    <article class="mission-card mission-reveal group relative lg:col-span-2 {{ $index === 3 ? 'lg:col-start-2' : '' }} bg-white rounded-[1.75rem] px-7 pt-16 pb-10 min-h-[280px] text-center border border-purple-100 shadow-[0_18px_45px_-18px_rgba(88,28,135,0.25)] hover:-translate-y-3 hover:shadow-[0_28px_55px_-18px_rgba(126,34,206,0.38)] transition-all duration-500"
+                        style="--mission-delay: {{ $index * 110 }}ms">
+                        <div class="absolute top-6 left-6 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-50 to-fuchsia-100 text-purple-800 flex items-center justify-center text-lg font-black">
+                            {{ $mission['number'] }}
+                        </div>
+
+                        <div class="mission-icon absolute -top-11 left-1/2 -translate-x-1/2 w-[88px] h-[88px] rounded-full p-2 bg-white shadow-xl shadow-purple-200/70 border border-purple-100">
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-fuchsia-500 via-purple-600 to-violet-800 text-white flex items-center justify-center ring-1 ring-fuchsia-300 ring-offset-4 ring-offset-purple-50">
+                                @if ($mission['icon'] === 'book')
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 5.5A2.5 2.5 0 016.5 3H11v16H6.5A2.5 2.5 0 004 21.5v-16zM20 5.5A2.5 2.5 0 0017.5 3H13v16h4.5a2.5 2.5 0 012.5 2.5v-16z" /></svg>
+                                @elseif ($mission['icon'] === 'quran')
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 5l8 4 8-4-8-3-8 3zM4 10l8 4 8-4M4 15l8 4 8-4" /></svg>
+                                @elseif ($mission['icon'] === 'people')
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M16 20v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 10a4 4 0 100-8 4 4 0 000 8zM22 20v-2a4 4 0 00-3-3.87M16 2.13a4 4 0 010 7.75" /></svg>
+                                @elseif ($mission['icon'] === 'graduate')
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M3 8l9-5 9 5-9 5-9-5zM7 10.5V15c2.8 2 7.2 2 10 0v-4.5M21 8v6" /></svg>
+                                @else
+                                    <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9 18h6M10 22h4M8.2 14.5A7 7 0 1115.8 14.5 5 5 0 0014 18h-4a5 5 0 00-1.8-3.5zM12 2v2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4" /></svg>
+                                @endif
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-black text-purple-900 mb-4 leading-tight">{{ $mission['title'] }}</h3>
+                        <p class="text-slate-600 text-sm leading-7 font-medium">{{ $mission['description'] }}</p>
+                        <div class="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-fuchsia-400 mx-auto mt-6 group-hover:w-24 transition-all duration-500"></div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
+
+    <style>
+        .mission-reveal {
+            opacity: 0;
+            transform: translateY(34px);
+            transition: opacity 700ms ease var(--mission-delay, 0ms), transform 700ms ease var(--mission-delay, 0ms);
+        }
+
+        .mission-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mission-card.is-visible:hover {
+            transform: translateY(-12px);
+        }
+
+        .mission-icon {
+            animation: mission-icon-float 3.4s ease-in-out infinite;
+        }
+
+        @keyframes mission-icon-float {
+            0%, 100% { margin-top: 0; }
+            50% { margin-top: -7px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .mission-reveal,
+            .mission-reveal.is-visible,
+            .mission-card.is-visible:hover {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .mission-icon {
+                animation: none;
+            }
+        }
+    </style>
 
     {{-- 3. AKREDITASI --}}
     <section id="akreditasi" class="py-28 bg-gray-900 text-white relative overflow-hidden scroll-mt-24">
@@ -274,5 +390,27 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealItems = document.querySelectorAll('.mission-reveal');
+
+            if (!('IntersectionObserver' in window)) {
+                revealItems.forEach(item => item.classList.add('is-visible'));
+                return;
+            }
+
+            const missionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealItems.forEach(item => missionObserver.observe(item));
+        });
+    </script>
 
 @endsection

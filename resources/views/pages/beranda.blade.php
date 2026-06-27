@@ -9,7 +9,7 @@
 
 @section('content')
     {{-- HERO SECTION (overflow-hidden dihapus agar kotak statistik yang menjorok ke bawah tidak terpotong/hilang) --}}
-    <section class="relative min-h-screen flex flex-col justify-between pt-20 bg-gray-950">
+    <section class="relative min-h-[690px] md:min-h-[640px] flex flex-col justify-between bg-[#13072c]">
 
         {{-- WADAH UTAMA SLIDER BERGESER (SWIPER CAROUSEL) --}}
         <div class="swiper hero-swiper absolute inset-0 z-0 w-full h-full overflow-hidden">
@@ -17,101 +17,142 @@
 
                 <div class="swiper-slide w-full h-full">
                     <img src="{{ asset('assets/img/bangunan.jpeg') }}"
-                        class="w-full h-full object-cover object-center brightness-[0.45]" alt="Gedung Aisyah Samawa">
+                        class="w-full h-full object-cover object-center brightness-[0.72]" alt="Gedung Aisyah Samawa">
                 </div>
 
                 <div class="swiper-slide w-full h-full">
                     <img src="{{ asset('assets/img/kegiatan.jpeg') }}"
-                        class="w-full h-full object-cover object-center brightness-[0.45]" alt="Kegiatan Aisyah Samawa">
+                        class="w-full h-full object-cover object-center brightness-[0.72]" alt="Kegiatan Aisyah Samawa">
                 </div>
 
                 <div class="swiper-slide w-full h-full">
                     <img src="{{ asset('assets/img/bg4.jpg') }}"
-                        class="w-full h-full object-cover object-center brightness-[0.45]" alt="Fasilitas Aisyah Samawa">
+                        class="w-full h-full object-cover object-center brightness-[0.72]" alt="Fasilitas Aisyah Samawa">
                 </div>
 
                 <div class="swiper-slide w-full h-full">
                     <img src="{{ asset('assets/img/bg2.jpeg') }}"
-                        class="w-full h-full object-cover object-center brightness-[0.45]" alt="Lingkungan Aisyah Samawa">
+                        class="w-full h-full object-cover object-center brightness-[0.72]" alt="Lingkungan Aisyah Samawa">
                 </div>
 
             </div>
 
             {{-- Lapisan gradien konstan di atas foto agar teks putih selalu tajam dibaca --}}
             <div
-                class="absolute inset-0 bg-gradient-to-r from-gray-950/80 via-purple-950/20 to-transparent z-10 pointer-events-none">
+                class="absolute inset-0 bg-gradient-to-r from-[rgba(15,8,38,0.92)] via-[rgba(25,15,50,0.55)] to-[rgba(25,15,50,0.12)] z-10 pointer-events-none">
             </div>
         </div>
 
         {{-- KONTEN UTAMA HERO --}}
-        <div class="max-w-7xl mx-auto px-6 relative z-20 w-full flex-1 flex items-center pt-12 md:pt-20">
-            <div class="max-w-4xl text-left">
+        
+        <br>
+        <div class="max-w-7xl mx-auto px-6 relative z-20 w-full flex-1 flex items-center py-12 md:py-10 md:pb-24">
+            <div class="max-w-3xl text-left">
 
+<<<<<<< HEAD
 
                 <h1 class="text-4xl md:text-7xl font-black  text-white leading-tight mb-6 tracking-tighter drop-shadow-2xl">
+=======
+                <h1 class="text-4xl md:text-[60px] font-black text-white leading-[1.06] mb-4 tracking-[-0.04em] drop-shadow-2xl">
+>>>>>>> 7f39c2969cee77f31d7056328311f3b08885c2f7
                     Membentuk Generasi yang <br>
                     <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-purple-100 to-indigo-200 uppercase">
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#f08cff] via-[#d89cff] to-[#c3a5ff] uppercase">
                         Berilmu dan Berakhlak
                     </span>
                 </h1>
 
-                <p class="text-lg md:text-2xl text-purple-100 font-medium leading-relaxed drop-shadow-md mb-4">
+                <p class="text-sm md:text-base text-white/90 font-medium leading-relaxed drop-shadow-md mb-2 max-w-xl">
                     Selamat datang di sumber informasi Pondok Pesantren Aisyah Samawa.
                 </p>
 
-                <p class="italic text-fuchsia-300 text-2xl md:text-3xl font-bold mb-10 drop-shadow-lg">
+                <p class="italic text-[#f0a2ff] text-lg md:text-xl font-bold mb-5 drop-shadow-lg">
                     "Spirituality, Intellectuality, and Morality"
                 </p>
 
-                <div class="flex flex-wrap gap-6">
+                {{-- Keunggulan utama seperti pada referensi --}}
+                <br>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 max-w-3xl mt-8 mb-6">
+                    <div class="flex items-center gap-3 min-h-[80px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5.5A2.5 2.5 0 016.5 3H11v16H6.5A2.5 2.5 0 004 21.5v-16zM20 5.5A2.5 2.5 0 0017.5 3H13v16h4.5a2.5 2.5 0 012.5 2.5v-16z" />
+                        </svg>
+                        <span class="text-xs md:text-[13px] font-bold leading-tight">Kurikulum<br>Modern</span>
+                    </div>
+                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 20h18M5 20v-8h14v8M7 12V8l5-4 5 4v4M9 16h.01M12 16h.01M15 16h.01" />
+                        </svg>
+                        <span class="text-xs md:text-[13px] font-bold leading-tight">Boarding<br>School</span>
+                    </div>
+                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM8.5 14.5L7 21l5-2 5 2-1.5-6.5" />
+                        </svg>
+                        <span class="text-xs md:text-[13px] font-bold leading-tight">Akreditasi A</span>
+                    </div>
+                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" stroke-width="1.8" />
+                            <path stroke-linecap="round" stroke-width="1.8" d="M3.5 12h17M12 3c2.2 2.4 3.3 5.4 3.3 9S14.2 18.6 12 21M12 3C9.8 5.4 8.7 8.4 8.7 12S9.8 18.6 12 21" />
+                        </svg>
+                        <span class="text-xs md:text-[13px] font-bold leading-tight">Bahasa Arab &<br>Inggris</span>
+                    </div>
+                </div>
+
+                <br>
+                <div class="flex flex-wrap gap-4">
                     <a href="{{ route('ppdb.landing') }}"
-                        class="bg-fuchsia-600/30 backdrop-blur-lg text-white border-2 border-fuchsia-500/50 px-10 py-4 rounded-2xl font-black hover:bg-fuchsia-600 transition-all shadow-lg text-lg">
-                        DAFTAR PPDB
+                        class="inline-flex items-center justify-center min-w-[190px] bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white border border-fuchsia-400/40 px-8 py-4 rounded-2xl font-black hover:from-violet-500 hover:to-fuchsia-500 hover:-translate-y-0.5 transition-all shadow-lg shadow-fuchsia-950/30 text-sm">
+                        DAFTAR PPDB  <span class="text-lg leading-none"></span>
                     </a>
                     <a href="{{ route('tentang') }}"
-                        class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-10 py-4 rounded-2xl font-black hover:bg-white hover:text-purple-900 transition-all text-lg">
-                        PROFIL SEKOLAH
+                        class="inline-flex items-center justify-center min-w-[210px] bg-white/[0.06] backdrop-blur-md border border-white/70 text-white px-8 py-4 rounded-2xl font-black hover:bg-white hover:text-purple-900 hover:-translate-y-0.5 transition-all text-sm">
+                        PROFIL SEKOLAH  <span class="text-lg leading-none"></span>
                     </a>
                 </div>
             </div>
         </div>
 
         {{-- KOTAK STATISTIK MELAYANG SETENGAH DI ATAS HERO, SETENGAH DI ATAS PUTIH (z-30 memastikan dia di paling depan) --}}
-        <div class="relative z-30 w-full max-w-6xl mx-auto px-4 md:px-6 -mb-20 md:-mb-24">
+        <div class="relative z-30 w-full max-w-5xl mx-auto px-4 md:px-6 -mb-24 md:-mb-20">
             <div
-                class="w-full bg-purple-950/95 backdrop-blur-md rounded-[2rem] py-8 md:py-12 px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] border border-purple-800/40">
+                class="w-full bg-gradient-to-r from-[#321067]/95 via-[#4a127d]/95 to-[#28105e]/95 backdrop-blur-md rounded-[1.75rem] py-7 md:py-8 px-5 grid grid-cols-2 md:grid-cols-4 gap-y-7 shadow-[0_25px_50px_-12px_rgba(43,10,86,0.6)] border border-fuchsia-500/20">
 
-                <div class="text-center md:border-r border-purple-800/60 px-2">
-                    <p class="text-4xl md:text-6xl font-black text-white leading-none tracking-tight">
-                        <span class="count-number" data-target="500">0</span> +
-                    </p>
-                    <p class="text-purple-300 font-bold uppercase text-[10px] md:text-xs tracking-widest mt-3">Total
-                        Santriwati</p>
+                <div class="text-center md:border-r border-purple-300/20 px-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="500">0</span>+</p>
+                    </div>
+                    <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Total Santriwati</p>
+                    <p class="text-purple-200/70 text-[9px] mt-1">Santriwati aktif dan berprestasi</p>
                 </div>
 
-                <div class="text-center md:border-r border-purple-800/60 px-2">
-                    <p class="text-4xl md:text-6xl font-black text-white leading-none tracking-tight">
-                        <span class="count-number" data-target="50">0</span> +
-                    </p>
-                    <p class="text-purple-300 font-bold uppercase text-[10px] md:text-[10px] tracking-widest mt-3">Guru &
-                        Pengajar</p>
+                <div class="text-center md:border-r border-purple-300/20 px-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l9-5 9 5-9 5-9-5zM7 10.5V15c2.8 2 7.2 2 10 0v-4.5M21 8v6" /></svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="50">0</span>+</p>
+                    </div>
+                    <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Guru & Pengajar</p>
+                    <p class="text-purple-200/70 text-[9px] mt-1">Guru profesional & berkompeten</p>
                 </div>
 
-                <div class="text-center md:border-r border-purple-800/60 px-2">
-                    <p class="text-4xl md:text-6xl font-black text-white leading-none tracking-tight">
-                        <span class="count-number" data-target="8">0</span> +
-                    </p>
-                    <p class="text-purple-300 font-bold uppercase text-[10px] md:text-xs tracking-widest mt-3">Tahun Berdiri
-                    </p>
+                <div class="text-center md:border-r border-purple-300/20 px-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke-width="1.8" /><path stroke-linecap="round" stroke-width="1.8" d="M16 3v4M8 3v4M3 10h18M12 13v5M9.5 15.5h5" /></svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="8">0</span>+</p>
+                    </div>
+                    <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Tahun Berdiri</p>
+                    <p class="text-purple-200/70 text-[9px] mt-1">Pengalaman dalam pendidikan</p>
                 </div>
 
                 <div class="text-center px-2">
-                    <p class="text-4xl md:text-6xl font-black text-white leading-none tracking-tight">
-                        <span class="count-number" data-target="15">0</span> +
-                    </p>
-                    <p class="text-purple-300 font-bold uppercase text-[10px] md:text-xs tracking-widest mt-3">Prestasi
-                        Unggulan</p>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4zM7 6H4v2a4 4 0 004 4M17 6h3v2a4 4 0 01-4 4" /></svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="15">0</span>+</p>
+                    </div>
+                    <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Prestasi Unggulan</p>
+                    <p class="text-purple-200/70 text-[9px] mt-1">Tingkat regional & nasional</p>
                 </div>
 
             </div>
@@ -148,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="order-1 md:order-2 relative group">
+            <div class="order-1 md:order-2 relative group max-w-sm mx-auto">
                 <div
                     class="absolute inset-0 bg-gradient-to-tr from-purple-600 to-fuchsia-600 rounded-[2rem] rotate-3 scale-105 opacity-20 group-hover:rotate-6 transition-transform duration-500">
                 </div>
@@ -162,98 +203,6 @@
                         class="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700"
                         style="object-position: center 30%;">
                 @endif
-            </div>
-        </div>
-    </section>
-
-{{-- SECTION: VISI & MISI --}}
-    <section class="py-28 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
-        {{-- Dekorasi Latar Belakang Abstrak --}}
-        <div class="absolute top-0 left-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-300/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-fuchsia-600 font-black tracking-[0.4em] text-sm mb-4 uppercase">Our Vision</h2>
-                <p class="text-4xl md:text-6xl font-black text-gray-900 mb-4 tracking-tighter">
-                    SPIRITUALITY, INTELLECTUALITY, <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-fuchsia-600">& MORALITY</span>
-                </p>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                
-                {{-- Card Header MISI --}}
-                <div class="p-10 rounded-[2rem] bg-gray-900 text-white flex flex-col justify-center relative overflow-hidden group shadow-2xl h-full min-h-[250px]">
-                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-fuchsia-600/30 blur-3xl group-hover:bg-fuchsia-500/50 transition-colors duration-700"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-5xl font-black mb-4 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-purple-300">MISI KAMI</h3>
-                        <p class="text-gray-400 text-lg leading-relaxed font-medium">Komitmen konkret kami untuk mencetak muslimah berkualitas yang unggul di dunia dan akhirat.</p>
-                    </div>
-                </div>
-
-                {{-- Misi 1 --}}
-                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
-                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">1</div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">01</div>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Menyelenggarakan sistem pendidikan yang berkualitas dalam frame islami sesuai dengan manhaj <span class="font-bold text-purple-700">Ahlus Sunnah Wal Jama'ah.</span>
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
-                </div>
-
-                {{-- Misi 2 --}}
-                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
-                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">2</div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">02</div>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Mengupayakan secara maksimal program <span class="font-bold text-purple-700">Tahfidz Al-Qur'an & Sains</span> sebagai *Brand* keunggulan Pesantren.
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
-                </div>
-
-                {{-- Misi 3 --}}
-                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
-                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">3</div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">03</div>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Menumbuhkan pemahaman yang mendalam tentang dasar perilaku islami serta pelestarian <span class="font-bold text-purple-700">budaya bangsa.</span>
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
-                </div>
-
-                {{-- Misi 4 --}}
-                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
-                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">4</div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">04</div>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Melaksanakan pendidikan dan pembelajaran secara efektif dan menyenangkan dengan mengacu pada <span class="font-bold text-purple-700">moralitas dan akhlakul karimah.</span>
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
-                </div>
-
-                {{-- Misi 5 --}}
-                <div class="relative p-10 rounded-[2rem] bg-white border border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden z-10 h-full min-h-[250px]">
-                    <div class="absolute -right-4 -top-8 text-[140px] font-black text-slate-50 group-hover:text-purple-50 transition-colors duration-500 z-0 select-none">5</div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center font-black text-xl mb-6 group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-fuchsia-600 group-hover:text-white transition-all duration-500 shadow-sm">05</div>
-                        <p class="text-gray-700 text-lg leading-relaxed">
-                            Menyelenggarakan pendidikan yang <span class="font-bold text-purple-700">kreatif, inovatif, dan variatif</span> dalam nuansa lingkungan pondok pesantren yang asri.
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 group-hover:w-full transition-all duration-700 ease-in-out"></div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -410,7 +359,7 @@
     {{-- SECTION: PPDB BANNER --}}
     <section id="ppdb" class="py-24 px-4">
         <div
-            class="max-w-6xl mx-auto bg-gradient-to-br from-indigo-900 via-purple-800 to-fuchsia-700 rounded-[3.5rem] p-12 md:p-24 text-center text-white shadow-[0_35px_60px_-15px_rgba(124,58,237,0.5)] relative overflow-hidden">
+            class="max-w-6xl mx-auto bg-[rgba(25,15,50,0.55)] rounded-[3.5rem] p-12 md:p-24 text-center text-white shadow-[0_35px_60px_-15px_rgba(25,15,50,0.55)] relative overflow-hidden">
             <div
                 class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
             </div>
