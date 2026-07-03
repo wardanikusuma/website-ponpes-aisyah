@@ -33,7 +33,12 @@
         </div>
     </section>
 
-     <div class="max-w-5xl mx-auto px-6 py-20">
+    <section class="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/70 to-fuchsia-50 py-20 md:py-28">
+        <div class="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-purple-300/25 blur-3xl"></div>
+        <div class="pointer-events-none absolute -right-32 bottom-10 h-[28rem] w-[28rem] rounded-full bg-fuchsia-300/20 blur-3xl"></div>
+        <div class="pointer-events-none absolute inset-0 opacity-30" style="background-image: radial-gradient(#c4b5fd 1.3px, transparent 1.3px); background-size: 32px 32px;"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
 <!--
         {{-- DAFTAR PPDB (CTA BOX) --}}
         <div class="mb-24">
@@ -54,10 +59,9 @@
         </div> -->
 
         {{-- LAYANAN INFORMASI --}}
-        <div id="layanan" class="mb-32 scroll-mt-24">
-            <div class="text-center mb-16">
-                <h3 class="text-xs font-black text-slate-400 uppercase tracking-[0.5em] mb-4">Layanan Informasi</h3>
-                <div class="w-12 h-1 bg-purple-200 mx-auto rounded-full"></div>
+        <div id="layanan" class="scroll-mt-24">
+            <div class="mx-auto mb-14 max-w-2xl text-center">
+                <p class="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">Pilih kanal yang paling nyaman. Tim kami siap membantu informasi pendidikan, pendaftaran, dan kegiatan pondok.</p>
             </div>
 
             @php
@@ -100,34 +104,25 @@
                 ];
             @endphp
 
-            <div class="space-y-8">
+            <div class="grid gap-6 md:grid-cols-2">
                 @foreach ($layanan as $l)
-                    <div
-                        class="flex flex-col md:flex-row items-center gap-12 p-12 rounded-[2.5rem] bg-white border border-slate-100 hover:shadow-2xl hover:border-purple-200 transition-all duration-300 group">
+                    <a href="{{ $l['link'] }}" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex min-h-56 flex-col overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-7 shadow-[0_18px_50px_-30px_rgba(88,28,135,0.45)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-purple-200 hover:shadow-[0_25px_60px_-25px_rgba(126,34,206,0.42)] sm:p-8 {{ $loop->last && $loop->count % 2 !== 0 ? 'md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]' : '' }}">
+                        <div class="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-gradient-to-br {{ $l['c'] }} opacity-[0.08] transition-transform duration-500 group-hover:scale-125"></div>
+                        <div class="relative flex items-start justify-between gap-5">
+                            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br {{ $l['c'] }} shadow-lg transition duration-500 group-hover:rotate-3 group-hover:scale-110">
+                                <img src="{{ $l['i'] }}" alt="{{ $l['t'] }}" class="h-8 w-8 object-contain">
+                            </div>
 
-                    <div
-                        class="w-24 h-24 shrink-0 bg-gradient-to-br {{ $l['c'] }} rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-
-                        <img src="{{ $l['i'] }}"
-                            alt="{{ $l['t'] }}"
-                            class="w-12 h-12 object-contain">
-
-                    </div>
-
-                        <div class="flex-1 text-center md:text-left">
-                            <h4 class="text-2xl font-black text-slate-800 uppercase tracking-tight">{{ $l['t'] }}</h4>
-                            <p class="text-slate-500 mt-2 font-medium">{{ $l['d'] }}</p>
                         </div>
-                        <div class="shrink-0">
-                            {{-- Membungkus tombol dengan tag tautan keluar --}}
-                            <a href="{{ $l['link'] }}" target="_blank" rel="noopener noreferrer">
-                                <button
-                                    class="px-8 py-3 bg-slate-50 text-slate-400 font-black text-xs rounded-full uppercase tracking-widest border border-slate-200 group-hover:bg-purple-600 group-hover:text-white group-hover:border-purple-600 transition-all cursor-pointer">
-                                    Hubungi
-                                </button>
-                            </a>
+                        <div class="relative mt-6 flex-1">
+                            <h3 class="text-xl font-black uppercase tracking-tight text-slate-900 md:text-2xl">{{ $l['t'] }}</h3>
+                            <p class="mt-2 leading-relaxed text-slate-500">{{ $l['d'] }}</p>
                         </div>
-                    </div>
+                        <div class="relative mt-5 flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-purple-700">
+                            Hubungi Sekarang 
+                        </div>
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -171,5 +166,6 @@
             </div>
         </div> -->
 
-    </div>
+        </div>
+    </section>
 @endsection
