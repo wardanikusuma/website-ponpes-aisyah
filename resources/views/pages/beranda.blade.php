@@ -303,7 +303,7 @@
                     <p class="text-gray-500 mt-3 text-lg font-medium">Kegiatan, prestasi, dan inspirasi harian santriwati.
                     </p>
                 </div>
-                <a href="{{ route('kesiswaan') }}"
+                <a href="{{ route('kesiswaan') }}#berita"
                     class="group flex items-center gap-3 text-purple-700 font-black uppercase text-sm tracking-widest mt-6 md:mt-0">
                     Lihat Semua
                     <span
@@ -324,10 +324,6 @@
                                     class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
                                     alt="Berita">
                             @endif
-                            <div class="absolute bottom-6 left-6">
-                                <span
-                                    class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">{{ $b->kategori ?? 'Kegiatan' }}</span>
-                            </div>
                         </div>
                         <h3
                             class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">

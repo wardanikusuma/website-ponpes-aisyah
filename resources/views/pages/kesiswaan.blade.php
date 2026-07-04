@@ -117,16 +117,18 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-20">
                 <div>
-                    <h2 class="text-4xl font-black text-gray-900 tracking-tight italic">Warta <span
-                            class="text-fuchsia-600">Pondok</span></h2>
-                    <p class="text-gray-500 mt-3 text-lg font-medium">Kegiatan, prestasi, dan inspirasi harian santriwati.
+                    <h2 class="text-4xl font-black text-gray-900 tracking-tight italic">
+                        Warta <span class="text-fuchsia-600">Pondok</span>
+                    </h2>
+                    <p class="text-gray-500 mt-3 text-lg font-medium">
+                        Kegiatan, prestasi, dan inspirasi harian santriwati.
                     </p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 @forelse ($berita as $b)
-                    <div class="group cursor-pointer">
+                    <div class="group bg-white rounded-[2rem] transition-all duration-300">
                         <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
                             @if ($b->foto)
                                 <img src="{{ asset('storage/' . $b->foto) }}"
@@ -137,24 +139,55 @@
                                     class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
                                     alt="Berita">
                             @endif
+
+                            {{-- Tombol Detail --}}
                             <div class="absolute bottom-6 left-6">
-                                <span
-                                    class="bg-purple-600/80 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em]">
-                                    {{ $b->kategori ?? 'Update' }}
-                                </span>
+                                <button type="button"
+                                    onclick="toggleBeritaDetail(this)"
+                                    class="bg-purple-600/90 hover:bg-fuchsia-600 backdrop-blur-md text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-lg transition-all hover:scale-105">
+                                    Detail
+                                </button>
                             </div>
                         </div>
-                        <h3
-                            class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
+
+                        <h3 class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
                             {{ $b->judul }}
                         </h3>
-                        <p class="text-gray-500 mt-3 font-medium italic">"{{ Str::limit($b->narasi, 100) }}"</p>
+
+                        {{-- Deskripsi pendek --}}
+                        <p class="berita-short text-gray-500 mt-3 font-medium italic leading-relaxed">
+                            "{{ Str::limit($b->narasi, 100) }}"
+                        </p>
+
+                        {{-- Deskripsi lengkap --}}
+                        <p class="berita-full hidden text-gray-600 mt-3 font-medium leading-relaxed whitespace-pre-line">
+                            {{ $b->narasi }}
+                        </p>
                     </div>
                 @empty
-                    <div class="col-span-2 text-center py-10 text-slate-400 italic">Belum ada warta pondok.</div>
+                    <div class="col-span-2 text-center py-10 text-slate-400 italic">
+                        Belum ada warta pondok.
+                    </div>
                 @endforelse
             </div>
         </div>
+
+        <script>
+            function toggleBeritaDetail(button) {
+                const card = button.closest('.group');
+                const shortText = card.querySelector('.berita-short');
+                const fullText = card.querySelector('.berita-full');
+
+                shortText.classList.toggle('hidden');
+                fullText.classList.toggle('hidden');
+
+                if (fullText.classList.contains('hidden')) {
+                    button.innerText = 'Detail';
+                } else {
+                    button.innerText = 'Tutup';
+                }
+            }
+        </script>
     </section>
 
     {{-- SECTION: PPDB --}}
