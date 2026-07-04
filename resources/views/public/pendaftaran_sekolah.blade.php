@@ -16,6 +16,17 @@
             
             <form action="{{ route('ppdb.daftar.sekolah') }}" method="POST" enctype="multipart/form-data" class="p-10 space-y-12">
                 @csrf
+
+                @if ($errors->any())
+                    <div class="bg-red-50 border border-red-300 text-red-700 p-6 rounded-2xl">
+                        <h4 class="font-bold text-lg mb-3">Pendaftaran gagal dikirim</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 
                 <!-- Jenjang Selection -->
                 <div class="bg-indigo-50/50 p-8 rounded-3xl border border-indigo-100">
@@ -44,12 +55,16 @@
                             note.innerText = '(Rapor kelas 5 semester 2 dan rapor kelas 6 semester 1)';
                             numericFields.classList.remove('hidden');
                             fileField.classList.remove('hidden');
+                            input1.disabled = false;
+                            input2.disabled = false;
                             input1.required = true;
                             input2.required = true;
                         } else if (jenjang === 'SMA') {
                             note.innerText = '(Rapor kelas 8 semester 2 dan rapor kelas 9 semester 1)';
                             numericFields.classList.remove('hidden');
                             fileField.classList.remove('hidden');
+                            input1.disabled = false;
+                            input2.disabled = false;
                             input1.required = true;
                             input2.required = true;
                         } else {
@@ -58,8 +73,28 @@
                             fileField.classList.add('hidden');
                             input1.required = false;
                             input2.required = false;
+                            input1.value = '';
+                            input2.value = '';
+                            input1.disabled = true;
+                            input2.disabled = true;
                         }
                     }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const selectedJenjang = document.querySelector('input[name="jenjang"]:checked');
+
+                        if (selectedJenjang) {
+                            updateRaporNote(selectedJenjang.value);
+                        } else {
+                            const input1 = document.querySelector('input[name="nilai_rapor1"]');
+                            const input2 = document.querySelector('input[name="nilai_rapor2"]');
+
+                            if (input1 && input2) {
+                                input1.disabled = true;
+                                input2.disabled = true;
+                            }
+                        }
+                    });
                 </script>
 
                 <!-- 1. DATA UTAMA -->

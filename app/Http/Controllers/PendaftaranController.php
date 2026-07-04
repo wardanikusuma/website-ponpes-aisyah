@@ -152,6 +152,13 @@ class PendaftaranController extends Controller
     {
         $kontenUmum = \App\Models\KontenUmum::first();
         $jenjang = $request->jenjang;
+
+        if (!in_array($jenjang, ['SD', 'SMP', 'SMA'])) {
+            return back()->withErrors([
+                'jenjang' => 'Jenjang yang dipilih tidak valid.'
+            ])->withInput();
+        }
+
         $column = 'is_registration_open_' . strtolower($jenjang);
         
         if ($kontenUmum && !$kontenUmum->$column) {
@@ -207,6 +214,14 @@ class PendaftaranController extends Controller
             'persetujuan' => 'required|accepted',
         ];
 
+        if (in_array($jenjang, ['SMP', 'SMA'])) {
+            $rules['nilai_rapor1'] = 'required|numeric';
+            $rules['nilai_rapor2'] = 'required|numeric';
+        } else {
+            $rules['nilai_rapor1'] = 'nullable';
+            $rules['nilai_rapor2'] = 'nullable';
+        }
+
         // Add file rules
         $fileFields = ['file_akta_lahir', 'file_kk', 'file_nisn', 'file_ktp_ayah', 'file_ktp_ibu', 'file_rapor', 'file_prestasi', 'file_ijazah', 'file_bukti_bayar'];
         foreach ($fileFields as $field) {
@@ -214,6 +229,11 @@ class PendaftaranController extends Controller
         }
 
         $validated = $request->validate($rules);
+
+        if ($validated['jenjang'] === 'SD') {
+            $validated['nilai_rapor1'] = null;
+            $validated['nilai_rapor2'] = null;
+        }
         
         // Handle file uploads
         foreach ($fileFields as $field) {
