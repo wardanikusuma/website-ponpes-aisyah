@@ -41,15 +41,17 @@
             <div
                 class="absolute inset-0 bg-gradient-to-r from-[rgba(15,8,38,0.92)] via-[rgba(25,15,50,0.55)] to-[rgba(25,15,50,0.12)] z-10 pointer-events-none">
             </div>
+
         </div>
 
         {{-- KONTEN UTAMA HERO --}}
-        
+
         <br>
         <div class="max-w-7xl mx-auto px-6 relative z-20 w-full flex-1 flex items-center py-12 md:py-10 md:pb-24">
             <div class="max-w-3xl text-left">
 
-                <h1 class="text-4xl md:text-[60px] font-black text-white leading-[1.06] mb-4 tracking-[-0.04em] drop-shadow-2xl">
+                <h1
+                    class="text-4xl md:text-[60px] font-black text-white leading-[1.06] mb-4 tracking-[-0.04em] drop-shadow-2xl">
                     Membentuk Generasi yang <br>
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-[#f08cff] via-[#d89cff] to-[#c3a5ff] uppercase">
@@ -68,28 +70,40 @@
                 {{-- Keunggulan utama seperti pada referensi --}}
                 <br>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 max-w-3xl mt-8 mb-6">
-                    <div class="flex items-center gap-3 min-h-[80px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
-                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5.5A2.5 2.5 0 016.5 3H11v16H6.5A2.5 2.5 0 004 21.5v-16zM20 5.5A2.5 2.5 0 0017.5 3H13v16h4.5a2.5 2.5 0 012.5 2.5v-16z" />
+                    <div
+                        class="flex items-center gap-3 min-h-[80px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M4 5.5A2.5 2.5 0 016.5 3H11v16H6.5A2.5 2.5 0 004 21.5v-16zM20 5.5A2.5 2.5 0 0017.5 3H13v16h4.5a2.5 2.5 0 012.5 2.5v-16z" />
                         </svg>
                         <span class="text-xs md:text-[13px] font-bold leading-tight">Kurikulum<br>Modern</span>
                     </div>
-                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
-                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 20h18M5 20v-8h14v8M7 12V8l5-4 5 4v4M9 16h.01M12 16h.01M15 16h.01" />
+                    <div
+                        class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M3 20h18M5 20v-8h14v8M7 12V8l5-4 5 4v4M9 16h.01M12 16h.01M15 16h.01" />
                         </svg>
                         <span class="text-xs md:text-[13px] font-bold leading-tight">Boarding<br>School</span>
                     </div>
-                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
-                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM8.5 14.5L7 21l5-2 5 2-1.5-6.5" />
+                    <div
+                        class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M12 15.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM8.5 14.5L7 21l5-2 5 2-1.5-6.5" />
                         </svg>
                         <span class="text-xs md:text-[13px] font-bold leading-tight">Akreditasi A</span>
                     </div>
-                    <div class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
-                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <div
+                        class="flex items-center gap-3 min-h-[64px] px-4 py-3 rounded-2xl border border-white/45 bg-white/[0.06] backdrop-blur-sm text-white">
+                        <svg class="w-8 h-8 md:w-9 md:h-9 shrink-0 text-fuchsia-300" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" aria-hidden="true">
                             <circle cx="12" cy="12" r="9" stroke-width="1.8" />
-                            <path stroke-linecap="round" stroke-width="1.8" d="M3.5 12h17M12 3c2.2 2.4 3.3 5.4 3.3 9S14.2 18.6 12 21M12 3C9.8 5.4 8.7 8.4 8.7 12S9.8 18.6 12 21" />
+                            <path stroke-linecap="round" stroke-width="1.8"
+                                d="M3.5 12h17M12 3c2.2 2.4 3.3 5.4 3.3 9S14.2 18.6 12 21M12 3C9.8 5.4 8.7 8.4 8.7 12S9.8 18.6 12 21" />
                         </svg>
                         <span class="text-xs md:text-[13px] font-bold leading-tight">Bahasa Arab &<br>Inggris</span>
                     </div>
@@ -99,11 +113,11 @@
                 <div class="flex flex-wrap gap-4">
                     <a href="{{ route('ppdb.landing') }}"
                         class="inline-flex items-center justify-center min-w-[190px] bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white border border-fuchsia-400/40 px-8 py-4 rounded-2xl font-black hover:from-violet-500 hover:to-fuchsia-500 hover:-translate-y-0.5 transition-all shadow-lg shadow-fuchsia-950/30 text-sm">
-                        DAFTAR PPDB  <span class="text-lg leading-none"></span>
+                        DAFTAR PPDB <span class="text-lg leading-none"></span>
                     </a>
                     <a href="{{ route('tentang') }}"
                         class="inline-flex items-center justify-center min-w-[210px] bg-white/[0.06] backdrop-blur-md border border-white/70 text-white px-8 py-4 rounded-2xl font-black hover:bg-white hover:text-purple-900 hover:-translate-y-0.5 transition-all text-sm">
-                        PROFIL SEKOLAH  <span class="text-lg leading-none"></span>
+                        PROFIL SEKOLAH <span class="text-lg leading-none"></span>
                     </a>
                 </div>
             </div>
@@ -116,8 +130,13 @@
 
                 <div class="text-center md:border-r border-purple-300/20 px-2">
                     <div class="flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>
-                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="500">0</span>+</p>
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                        </svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span
+                                class="count-number" data-target="500">0</span>+</p>
                     </div>
                     <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Total Santriwati</p>
                     <p class="text-purple-200/70 text-[9px] mt-1">Santriwati aktif dan berprestasi</p>
@@ -125,8 +144,13 @@
 
                 <div class="text-center md:border-r border-purple-300/20 px-2">
                     <div class="flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l9-5 9 5-9 5-9-5zM7 10.5V15c2.8 2 7.2 2 10 0v-4.5M21 8v6" /></svg>
-                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="50">0</span>+</p>
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M3 8l9-5 9 5-9 5-9-5zM7 10.5V15c2.8 2 7.2 2 10 0v-4.5M21 8v6" />
+                        </svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span
+                                class="count-number" data-target="50">0</span>+</p>
                     </div>
                     <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Guru & Pengajar</p>
                     <p class="text-purple-200/70 text-[9px] mt-1">Guru profesional & berkompeten</p>
@@ -134,8 +158,14 @@
 
                 <div class="text-center md:border-r border-purple-300/20 px-2">
                     <div class="flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" stroke-width="1.8" /><path stroke-linecap="round" stroke-width="1.8" d="M16 3v4M8 3v4M3 10h18M12 13v5M9.5 15.5h5" /></svg>
-                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="8">0</span>+</p>
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="16" rx="2" stroke-width="1.8" />
+                            <path stroke-linecap="round" stroke-width="1.8"
+                                d="M16 3v4M8 3v4M3 10h18M12 13v5M9.5 15.5h5" />
+                        </svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span
+                                class="count-number" data-target="8">0</span>+</p>
                     </div>
                     <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Tahun Berdiri</p>
                     <p class="text-purple-200/70 text-[9px] mt-1">Pengalaman dalam pendidikan</p>
@@ -143,8 +173,13 @@
 
                 <div class="text-center px-2">
                     <div class="flex items-center justify-center gap-3">
-                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4zM7 6H4v2a4 4 0 004 4M17 6h3v2a4 4 0 01-4 4" /></svg>
-                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span class="count-number" data-target="15">0</span>+</p>
+                        <svg class="w-8 h-8 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4zM7 6H4v2a4 4 0 004 4M17 6h3v2a4 4 0 01-4 4" />
+                        </svg>
+                        <p class="text-3xl md:text-4xl font-black text-white leading-none tracking-tight"><span
+                                class="count-number" data-target="15">0</span>+</p>
                     </div>
                     <p class="text-white font-bold uppercase text-[9px] tracking-[0.18em] mt-3">Prestasi Unggulan</p>
                     <p class="text-purple-200/70 text-[9px] mt-1">Tingkat regional & nasional</p>
@@ -159,7 +194,8 @@
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-20 items-center mt-10">
             <div class="order-2 md:order-1 relative">
                 <div class="absolute -top-4 -left-4 w-20 h-20 bg-purple-100 rounded-full -z-10 opacity-50"></div>
-                <h2 class="text-fuchsia-600 font-black text-xs uppercase tracking-[0.3em] mb-4">Sambutan Kepala Sekolah</h2>
+                <h2 class="text-fuchsia-600 font-black text-xs uppercase tracking-[0.3em] mb-4">Sambutan Kepala Sekolah
+                </h2>
                 <h3 class="text-4xl font-black text-gray-900 mb-8 leading-tight">
                     {{ $yayasan->sambutan_kepala_yayasan ?? 'Membangun Karakter Berbasis Moralitas' }}</h3>
 

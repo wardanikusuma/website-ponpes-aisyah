@@ -34,46 +34,106 @@
     </section>
 
     {{-- SECTION: PRESTASI --}}
-    <section id="prestasi" class="py-32 bg-slate-50 scroll-mt-24">
+    <section id="prestasi" class="py-28 bg-white scroll-mt-24">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-6 mb-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-2 h-10 bg-gradient-to-b from-purple-600 to-fuchsia-500 rounded-full"></div>
-                    <h3 class="text-3xl font-black text-slate-900 uppercase tracking-tighter">Prestasi Unggulan</h3>
-                </div>
-                <div class="h-[1px] flex-1 bg-slate-200"></div>
+
+            {{-- Header --}}
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-gray-900 tracking-tight italic">
+                    Prestasi <span class="text-fuchsia-600">Unggulan</span>
+                </h2>
+                <p class="text-gray-500 mt-3 text-lg font-medium">
+                    Dedikasi dan capaian terbaik para santriwati.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {{-- Card --}}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
                 @forelse ($prestasi as $p)
-                    <div
-                        class="group relative bg-white rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(124,58,237,0.1)] border border-slate-100 overflow-hidden">
-                        <div class="p-12 h-full flex flex-col items-center relative z-10">
-                            <div
-                                class="w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-[2rem] flex items-center justify-center text-5xl shadow-2xl mb-8 transform group-hover:rotate-6 transition-transform duration-500 overflow-hidden">
-                                @if ($p->foto)
-                                    <img src="{{ asset('storage/' . $p->foto) }}" class="w-full h-full object-cover">
-                                @else
+                    <div class="group bg-white rounded-[2rem] transition-all duration-300">
+
+                        {{-- Image --}}
+                        <div class="relative overflow-hidden rounded-[2.5rem] mb-6 shadow-2xl h-80">
+
+                            @if ($p->foto)
+                                <img src="{{ asset('storage/' . $p->foto) }}"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                                    alt="{{ $p->nama_prestasi }}">
+                            @else
+                                <div class="w-full h-full bg-gray-100 flex items-center justify-center text-7xl">
                                     🏆
-                                @endif
+                                </div>
+                            @endif
+
+                            {{-- Tahun --}}
+                            <div class="absolute top-6 left-6">
+                                <span
+                                    class="bg-fuchsia-600/90 backdrop-blur-md text-white px-5 py-2 rounded-full text-xs font-black tracking-[0.2em] uppercase shadow-lg">
+                                    {{ $p->tahun }}
+                                </span>
                             </div>
-                            <span
-                                class="text-fuchsia-600 font-black tracking-[0.2em] text-xs mb-3 uppercase">{{ $p->tahun }}</span>
-                            <h4
-                                class="text-3xl font-black text-slate-800 uppercase tracking-tighter text-center leading-tight">
-                                {{ $p->nama_prestasi }}</h4>
-                            <p class="mt-4 text-slate-500 text-center text-sm font-medium">
-                                {{ $p->deskripsi ?? 'Membanggakan umat melalui dedikasi dan hafalan yang mutqin.' }}</p>
+
+                            {{-- Tombol Detail --}}
+                            <div class="absolute bottom-6 left-6">
+                                <button type="button" onclick="togglePrestasiDetail(this)"
+                                    class="bg-purple-600/90 hover:bg-fuchsia-600 backdrop-blur-md text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-lg transition-all hover:scale-105">
+                                    Detail
+                                </button>
+                            </div>
+
                         </div>
-                        <div
-                            class="absolute -bottom-10 -right-10 w-40 h-40 bg-slate-50 rounded-full group-hover:bg-purple-50 transition-colors duration-500">
-                        </div>
+
+                        {{-- Judul --}}
+                        <h3
+                            class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
+                            {{ $p->nama_prestasi }}
+                        </h3>
+
+                        {{-- Deskripsi Pendek --}}
+                        <p class="prestasi-short text-gray-500 mt-3 font-medium italic leading-relaxed">
+                            "{{ Str::limit($p->deskripsi ?? 'Prestasi membanggakan santriwati Pondok Pesantren Aisyah Samawa.', 100) }}"
+                        </p>
+
+                        {{-- Deskripsi Lengkap --}}
+                        <p class="prestasi-full hidden text-gray-600 mt-3 font-medium leading-relaxed whitespace-pre-line">
+                            {{ $p->deskripsi ?? 'Prestasi membanggakan santriwati Pondok Pesantren Aisyah Samawa.' }}
+                        </p>
+
                     </div>
+
                 @empty
-                    <div class="col-span-2 text-center py-10 text-slate-400 italic">Belum ada data prestasi.</div>
+
+                    <div class="col-span-2 text-center py-10 text-slate-400 italic">
+                        Belum ada data prestasi.
+                    </div>
                 @endforelse
+
             </div>
+
         </div>
+
+        <script>
+            function togglePrestasiDetail(button) {
+
+                const card = button.closest('.group');
+
+                const shortText = card.querySelector('.prestasi-short');
+                const fullText = card.querySelector('.prestasi-full');
+
+                shortText.classList.toggle('hidden');
+                fullText.classList.toggle('hidden');
+
+                if (fullText.classList.contains('hidden')) {
+                    button.innerText = "Detail";
+                } else {
+                    button.innerText = "Tutup";
+                }
+            }
+        </script>
+
+    </section>
+
     </section>
 
     {{-- SECTION: EKSTRAKURIKULER --}}
@@ -142,15 +202,15 @@
 
                             {{-- Tombol Detail --}}
                             <div class="absolute bottom-6 left-6">
-                                <button type="button"
-                                    onclick="toggleBeritaDetail(this)"
+                                <button type="button" onclick="toggleBeritaDetail(this)"
                                     class="bg-purple-600/90 hover:bg-fuchsia-600 backdrop-blur-md text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-lg transition-all hover:scale-105">
                                     Detail
                                 </button>
                             </div>
                         </div>
 
-                        <h3 class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
+                        <h3
+                            class="text-2xl font-black text-gray-900 group-hover:text-fuchsia-600 transition duration-300 leading-snug">
                             {{ $b->judul }}
                         </h3>
 
