@@ -32,8 +32,8 @@
                 <div class="flex items-center group">
                     {{-- Wadah logo serasi ungu gelap --}}
                     <div
-                        class="w-16 h-16 rounded-full bg-purple-900 shadow-inner border-2 border-purple-700/50 flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
-                        <img src="{{ asset('assets/img/logo.jpg') }}" alt="Logo Aisyah Samawa"
+                        class="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden mr-4 transition-transform group-hover:scale-105">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo Aisyah Samawa"
                             class="w-full h-full object-contain p-1">
                     </div>
                     <div class="flex flex-col">
