@@ -335,7 +335,7 @@
                             class="inline-flex items-center gap-4 bg-fuchsia-600
                         rounded-2xl px-7 py-4 font-bold">
 
-                            🛡 Izin Kemenag No. 123/SK/2017
+                            Izin Kemenag No. 123/SK/2017
 
                         </div>
 
@@ -350,7 +350,7 @@
 
                 <div class="bg-white/5 border border-white/10 rounded-3xl p-8 text-center">
 
-                    <div class="text-5xl mb-4">🏆</div>
+                    <div class="text-5xl mb-4"></div>
 
                     <h4 class="text-white font-bold text-xl">
                         Akreditasi
@@ -364,7 +364,7 @@
 
                 <div class="bg-white/5 border border-white/10 rounded-3xl p-8 text-center">
 
-                    <div class="text-5xl mb-4">📖</div>
+                    <div class="text-5xl mb-4"></div>
 
                     <h4 class="text-white font-bold text-xl">
                         Kurikulum
@@ -378,7 +378,7 @@
 
                 <div class="bg-white/5 border border-white/10 rounded-3xl p-8 text-center">
 
-                    <div class="text-5xl mb-4">🛡</div>
+                    <div class="text-5xl mb-4"></div>
 
                     <h4 class="text-white font-bold text-xl">
                         Legalitas

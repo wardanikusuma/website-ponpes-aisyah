@@ -97,10 +97,10 @@
                         <p class="text-sm text-slate-500 text-center mb-8 flex-grow">{{ $j['detail'] }}</p>
 
                         {{-- Tombol Selengkapnya --}}
-                        <a href="#"
+                        {{-- <a href="#"
                             class="px-6 py-2 border-2 {{ $j['btn'] }} rounded-full text-sm font-bold transition-all duration-300">
                             Lihat Selengkapnya
-                        </a>
+                        </a> --}}
                     </div>
                 @endforeach
             </div>
