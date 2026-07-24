@@ -29,7 +29,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="lg:col-span-2">
                             <label class="block text-sm font-bold text-slate-600 mb-2">Nama Lengkap Anak</label>
-                            <input type="text" name="nama_lengkap" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="text" name="nama_lengkap" value="{{ old('nama_lengkap') }}" pattern="[A-Za-zÀ-ÿ\s.'-]+" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s.'-]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Email Orang Tua</label>
@@ -37,11 +37,11 @@
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">NIK Anak (Sesuai KK)</label>
-                            <input type="text" name="nik" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="text" name="nik" value="{{ old('nik') }}" inputmode="numeric" maxlength="16" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">No. KK</label>
-                            <input type="text" name="no_kk" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="text" name="no_kk" value="{{ old('no_kk') }}" inputmode="numeric" maxlength="16" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">No. Reg. Akta Kelahiran</label>
@@ -60,7 +60,7 @@
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Tanggal Lahir</label>
-                            <input type="date" name="tanggal_lahir" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="date" name="tanggal_lahir" max="{{ date('Y-m-d') }}" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Tinggal Bersama</label>
@@ -68,11 +68,11 @@
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Anak Ke-</label>
-                            <input type="number" name="anak_ke" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="number" name="anak_ke" min="1" step="1" oninput="if (this.value < 1) this.value = ''" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Jumlah Saudara</label>
-                            <input type="number" name="jumlah_saudara" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-purple-100 focus:border-purple-600 outline-none transition-all">
+                            <input type="number" name="jumlah_saudara" min="0" step="1" onkeydown="if(event.key === '-' || event.key === '+') event.preventDefault();" oninput="if (this.value < 0) this.value = ''" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all">
                         </div>
                     </div>
                 </div>
@@ -134,20 +134,29 @@
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-bold text-slate-600 mb-2">Nama Lengkap Ayah</label>
-                                <input type="text" name="nama_ayah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
+                                <input type="text" name="nama_ayah" value="{{ old('nama_ayah') }}" pattern="[A-Za-zÀ-ÿ\s.'-]+" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s.'-]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-slate-600 mb-2">NIK Ayah</label>
-                                <input type="text" name="nik_ayah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
+                                <input type="text" name="nik_ayah" value="{{ old('nik_ayah') }}" inputmode="numeric" maxlength="16" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-bold text-slate-600 mb-2">No. HP Ayah</label>
-                                    <input type="text" name="no_hp_ayah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
+                                    <input type="text" name="no_hp_ayah" value="{{ old('no_hp_ayah') }}" inputmode="numeric" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-bold text-slate-600 mb-2">Pendidikan</label>
-                                    <input type="text" name="pendidikan_ayah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all">
+                                    <select name="pendidikan_ayah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all appearance-none">
+                                        <option value="SD">SD</option>
+                                        <option value="SMP">SMP</option>
+                                        <option value="SMA/SMK">SMA/SMK</option>
+                                        <option value="D3">D3</option>
+                                        <option value="S1/D4">S1/D4</option>
+                                        <option value="S2">S2</option>
+                                        <option value="S3">S3</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -164,20 +173,29 @@
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-bold text-slate-600 mb-2">Nama Lengkap Ibu</label>
-                                <input type="text" name="nama_ibu" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
+                                <input type="text" name="nama_ibu" value="{{ old('nama_ibu') }}" pattern="[A-Za-zÀ-ÿ\s.'-]+" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s.'-]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-slate-600 mb-2">NIK Ibu</label>
-                                <input type="text" name="nik_ibu" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
+                                <input type="text" name="nik_ibu" value="{{ old('nik_ibu') }}" inputmode="numeric" maxlength="16" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-bold text-slate-600 mb-2">No. HP Ibu</label>
-                                    <input type="text" name="no_hp_ibu" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
+                                    <input type="text" name="no_hp_ibu" value="{{ old('no_hp_ibu') }}" inputmode="numeric" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-bold text-slate-600 mb-2">Pendidikan</label>
-                                    <input type="text" name="pendidikan_ibu" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-rose-100 focus:border-rose-600 outline-none transition-all">
+                                    <select name="pendidikan_ibu" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all appearance-none">
+                                        <option value="SD">SD</option>
+                                        <option value="SMP">SMP</option>
+                                        <option value="SMA/SMK">SMA/SMK</option>
+                                        <option value="D3">D3</option>
+                                        <option value="S1/D4">S1/D4</option>
+                                        <option value="S2">S2</option>
+                                        <option value="S3">S3</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -197,19 +215,32 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Golongan Darah</label>
-                            <input type="text" name="golongan_darah" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
+                            <select name="golongan_darah" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all appearance-none">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="O">O</option>
+                                <option value="AB">AB</option>
+                            </select>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Berat Badan (kg)</label>
-                            <input type="number" name="berat_badan" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
+                            <input type="number" name="berat_badan" min="1" step="0.1" oninput="if (this.value < 1) this.value = ''" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Tinggi Badan (cm)</label>
-                            <input type="number" name="tinggi_badan" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
+                            <input type="number" name="tinggi_badan" min="1" step="0.1" oninput="if (this.value < 1) this.value = ''" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-2">Ukuran Pakaian</label>
-                            <input type="text" name="ukuran_pakaian" class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-cyan-100 focus:border-cyan-600 outline-none transition-all">
+                            <select name="ukuran_pakaian" required class="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-600 outline-none transition-all appearance-none">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                                <option value="XXXL">XXXL</option>
+                            </select>
                         </div>
                     <div class="lg:col-span-4">
                         <label class="block text-sm font-bold text-slate-600 mb-2">Riwayat Penyakit (Opsional)</label>

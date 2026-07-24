@@ -36,16 +36,16 @@ class PendaftaranController extends Controller
 
         $rules = [
             'email' => 'required|email',
-            'nama_lengkap' => 'required|string|max:150',
+            'nama_lengkap' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
             'jenis_kelamin' => 'required|boolean',
-            'nik' => 'required|string|max:20',
-            'no_kk' => 'required|string|max:20',
-            'no_registrasi_akta' => 'required|string|max:50',
+            'nik' => ['required', 'digits:16', 'unique:pendaftaran_paud,nik'],
+            'no_kk' => ['required', 'digits:16'],
+            'no_registrasi_akta' => 'required|string|max:50|unique:pendaftaran_paud,no_registrasi_akta',
             'tempat_lahir' => 'required|string|max:100',
-            'tanggal_lahir' => 'required|date',
+            'tanggal_lahir' => 'required|date|before_or_equal:today',
             'tinggal_bersama' => 'required|string|max:20',
-            'anak_ke' => 'required|integer',
-            'jumlah_saudara' => 'required|integer',
+            'anak_ke' => 'required|integer|min:1',
+            'jumlah_saudara' => 'required|integer|min:0',
             'alamat' => 'required|string',
             'rt_rw' => 'required|string|max:20',
             'dusun' => 'nullable|string|max:100',
@@ -53,22 +53,22 @@ class PendaftaranController extends Controller
             'kecamatan' => 'required|string|max:100',
             'kabupaten' => 'required|string|max:100',
             'provinsi' => 'required|string|max:100',
-            'nama_ayah' => 'required|string|max:150',
-            'nik_ayah' => 'required|string|max:20',
-            'no_hp_ayah' => 'required|string|max:20',
+            'nama_ayah' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
+            'nik_ayah' => ['required', 'digits:16'],
+            'no_hp_ayah' => ['required', 'string', 'max:20', 'regex:/^[0-9]+$/'],
             'pekerjaan_ayah' => 'nullable|string|max:100',
-            'pendidikan_ayah' => 'nullable|string|max:50',
+            'pendidikan_ayah' => 'required|in:SD,SMP,SMA/SMK,D3,S1/D4,S2,S3,Lainnya',
             'penghasilan_ayah' => 'nullable|string|max:50',
-            'nama_ibu' => 'required|string|max:150',
-            'nik_ibu' => 'required|string|max:20',
-            'no_hp_ibu' => 'required|string|max:20',
-            'pendidikan_ibu' => 'nullable|string|max:50',
+            'nama_ibu' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
+            'nik_ibu' => ['required', 'digits:16'],
+            'no_hp_ibu' => ['required', 'string', 'max:20', 'regex:/^[0-9]+$/'],
+            'pendidikan_ibu' => 'required|in:SD,SMP,SMA/SMK,D3,S1/D4,S2,S3,Lainnya',
             'pekerjaan_ibu' => 'nullable|string|max:100',
             'penghasilan_ibu' => 'nullable|string|max:50',
-            'golongan_darah' => 'nullable|string|max:5',
-            'berat_badan' => 'nullable|integer',
-            'tinggi_badan' => 'nullable|integer',
-            'ukuran_pakaian' => 'nullable|string|max:20',
+            'golongan_darah' => 'required|in:A,B,O,AB',
+            'berat_badan' => 'nullable|numeric|min:1',
+            'tinggi_badan' => 'nullable|numeric|min:1',
+            'ukuran_pakaian' => 'required|in:XS,S,M,L,XL,XXL,XXXL',
             'riwayat_penyakit' => 'nullable|string|max:255',
             'persetujuan' => 'required|accepted',
         ];
@@ -79,7 +79,12 @@ class PendaftaranController extends Controller
             $rules[$field] = 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048';
         }
 
-        $validated = $request->validate($rules);
+        $messages = [
+            'nik.unique' => 'NIK tersebut sudah terdaftar.',
+            'no_registrasi_akta.unique' => 'Nomor registrasi akta kelahiran tersebut sudah terdaftar.',
+        ];
+        
+        $validated = $request->validate($rules, $messages);
         
         // Handle file uploads
         foreach ($fileFields as $field) {
@@ -168,19 +173,19 @@ class PendaftaranController extends Controller
         $rules = [
             'jenjang' => 'required|in:SD,SMP,SMA',
             'email' => 'required|email',
-            'nama_lengkap' => 'required|string|max:150',
+            'nama_lengkap' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
             'jenis_kelamin' => 'required|boolean',
-            'nisn' => 'required|string|max:20',
-            'nik' => 'required|string|max:20',
-            'no_kk' => 'required|string|max:20',
-            'no_registrasi_akta' => 'required|string|max:50',
+            'nisn' => ['required', 'digits:10', 'unique:pendaftaran_sma_smp_sd,nisn'],
+            'nik' => ['required', 'digits:16', 'unique:pendaftaran_sma_smp_sd,nik'],
+            'no_kk' => ['required', 'digits:16'],
+            'no_registrasi_akta' => 'required|string|max:50|unique:pendaftaran_sma_smp_sd,no_registrasi_akta',
             'nama_sekolah_asal' => 'required|string|max:150',
-            'npsn_sekolah_asal' => 'nullable|string|max:20',
+            'npsn_sekolah_asal' => ['nullable', 'digits:8'],
             'tempat_lahir' => 'required|string|max:100',
-            'tanggal_lahir' => 'required|date',
+            'tanggal_lahir' => 'required|date|before_or_equal:today',
             'tinggal_bersama' => 'required|string|max:20',
-            'anak_ke' => 'required|integer',
-            'jumlah_saudara' => 'required|integer',
+            'anak_ke' => 'required|integer|min:1',
+            'jumlah_saudara' => 'required|integer|min:0',
             'alamat' => 'required|string',
             'rt_rw' => 'required|string|max:20',
             'dusun' => 'nullable|string|max:100',
@@ -190,23 +195,23 @@ class PendaftaranController extends Controller
             'provinsi' => 'required|string|max:100',
             'no_kks' => 'nullable|string|max:30',
             'no_kps' => 'nullable|string|max:30',
-            'no_kip' => 'nullable|string|max:30',
-            'nama_ayah' => 'required|string|max:150',
-            'nik_ayah' => 'required|string|max:20',
-            'no_hp_ayah' => 'required|string|max:20',
+            'no_kip' => 'nullable|string|max:30|unique:pendaftaran_sma_smp_sd,no_kip',
+            'nama_ayah' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
+            'nik_ayah' => ['required', 'digits:16'],
+            'no_hp_ayah' => ['required', 'string', 'max:20', 'regex:/^[0-9]+$/'],
             'pekerjaan_ayah' => 'nullable|string|max:100',
-            'pendidikan_ayah' => 'nullable|string|max:50',
+            'pendidikan_ayah' => 'required|in:SD,SMP,SMA/SMK,D3,S1/D4,S2,S3,Lainnya',
             'penghasilan_ayah' => 'nullable|string|max:50',
-            'nama_ibu' => 'required|string|max:150',
-            'nik_ibu' => 'required|string|max:20',
-            'no_hp_ibu' => 'required|string|max:20',
-            'pendidikan_ibu' => 'nullable|string|max:50',
+            'nama_ibu' => ['required', 'string', 'max:150', 'regex:/^[\pL\s.\'-]+$/u'],
+            'nik_ibu' => ['required', 'digits:16'],
+            'no_hp_ibu' => ['required', 'string', 'max:20', 'regex:/^[0-9]+$/'],
+            'pendidikan_ibu' => 'required|in:SD,SMP,SMA/SMK,D3,S1/D4,S2,S3,Lainnya',
             'pekerjaan_ibu' => 'nullable|string|max:100',
             'penghasilan_ibu' => 'nullable|string|max:50',
-            'golongan_darah' => 'nullable|string|max:5',
-            'berat_badan' => 'nullable|integer',
-            'tinggi_badan' => 'nullable|integer',
-            'ukuran_pakaian' => 'nullable|string|max:20',
+            'golongan_darah' => 'required|in:A,B,O,AB',
+            'berat_badan' => 'nullable|numeric|min:1',
+            'tinggi_badan' => 'nullable|numeric|min:1',
+            'ukuran_pakaian' => 'required|in:XS,S,M,L,XL,XXL,XXXL',
             'riwayat_penyakit' => 'nullable|string|max:255',
             'nilai_rapor1' => 'required_if:jenjang,SMP,SMA|numeric',
             'nilai_rapor2' => 'required_if:jenjang,SMP,SMA|numeric',
@@ -228,7 +233,14 @@ class PendaftaranController extends Controller
             $rules[$field] = 'nullable|file|mimes:pdf,jpg,jpeg,png|max:2048';
         }
 
-        $validated = $request->validate($rules);
+        $messages = [
+            'nisn.unique' => 'NISN tersebut sudah terdaftar.',
+            'nik.unique' => 'NIK tersebut sudah terdaftar.',
+            'no_registrasi_akta.unique' => 'Nomor registrasi akta kelahiran tersebut sudah terdaftar.',
+            'no_kip.unique' => 'Nomor KIP tersebut sudah terdaftar.',
+        ];
+        
+        $validated = $request->validate($rules, $messages);
 
         if ($validated['jenjang'] === 'SD') {
             $validated['nilai_rapor1'] = null;
